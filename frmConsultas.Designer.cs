@@ -28,29 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnCargarInserts = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.btnVistasCargadas = new System.Windows.Forms.Button();
             this.btnBuscador = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // btnCargarInserts
-            // 
-            this.btnCargarInserts.Location = new System.Drawing.Point(595, 11);
-            this.btnCargarInserts.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnCargarInserts.Name = "btnCargarInserts";
-            this.btnCargarInserts.Size = new System.Drawing.Size(299, 139);
-            this.btnCargarInserts.TabIndex = 0;
-            this.btnCargarInserts.Text = "Cargar Base";
-            this.btnCargarInserts.UseVisualStyleBackColor = true;
-            this.btnCargarInserts.Click += new System.EventHandler(this.btnCargarInserts_Click);
-            // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(595, 157);
+            this.button1.Location = new System.Drawing.Point(306, 157);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(297, 90);
+            this.button1.Size = new System.Drawing.Size(283, 90);
             this.button1.TabIndex = 1;
             this.button1.Text = "Volver al Menu Principal";
             this.button1.UseVisualStyleBackColor = true;
@@ -82,21 +70,19 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(904, 258);
+            this.ClientSize = new System.Drawing.Size(603, 258);
             this.Controls.Add(this.btnBuscador);
             this.Controls.Add(this.btnVistasCargadas);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.btnCargarInserts);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmConsultas";
             this.Text = "Consultas";
+            this.Load += new System.EventHandler(this.frmConsultas_Load);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnCargarInserts;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnVistasCargadas;
         private System.Windows.Forms.Button btnBuscador;

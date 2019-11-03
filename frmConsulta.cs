@@ -92,7 +92,9 @@ namespace Automotores
 
         private void btnVolver_Click(object sender, EventArgs e)
         {
-            Close();
+            this.Hide();
+            frmConsultas fcc = new frmConsultas();
+            fcc.ShowDialog();
         }
     }
 }

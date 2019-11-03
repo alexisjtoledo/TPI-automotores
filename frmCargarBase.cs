@@ -19,7 +19,17 @@ namespace Automotores
 
         private void btnVolver_Click(object sender, EventArgs e)
         {
-            Close();
+            this.Hide();
+            //Close();
+        }
+
+        private void btnDeleteBase_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Desea eliminar la base: Automotores?", "Borrar", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
+            {
+                // Funcion Borrar Base
+                //Close();
+            }
         }
     }
 }

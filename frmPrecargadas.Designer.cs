@@ -171,9 +171,9 @@
             this.lblTitulo.AutoSize = true;
             this.lblTitulo.Location = new System.Drawing.Point(555, 70);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(193, 25);
+            this.lblTitulo.Size = new System.Drawing.Size(120, 25);
             this.lblTitulo.TabIndex = 22;
-            this.lblTitulo.Text = "Texto de la consulta:";
+            this.lblTitulo.Text = "Descripcion:";
             // 
             // txtConsulta
             // 

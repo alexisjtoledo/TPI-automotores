@@ -42,7 +42,7 @@
             this.btnProductos.Location = new System.Drawing.Point(12, 12);
             this.btnProductos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnProductos.Name = "btnProductos";
-            this.btnProductos.Size = new System.Drawing.Size(236, 114);
+            this.btnProductos.Size = new System.Drawing.Size(267, 114);
             this.btnProductos.TabIndex = 0;
             this.btnProductos.Text = "Productos";
             this.btnProductos.UseVisualStyleBackColor = true;
@@ -52,7 +52,7 @@
             this.btnConsultas.Location = new System.Drawing.Point(285, 12);
             this.btnConsultas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnConsultas.Name = "btnConsultas";
-            this.btnConsultas.Size = new System.Drawing.Size(236, 114);
+            this.btnConsultas.Size = new System.Drawing.Size(261, 114);
             this.btnConsultas.TabIndex = 1;
             this.btnConsultas.Text = "Consultas";
             this.btnConsultas.UseVisualStyleBackColor = true;
@@ -63,7 +63,7 @@
             this.btnReportes.Location = new System.Drawing.Point(552, 12);
             this.btnReportes.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnReportes.Name = "btnReportes";
-            this.btnReportes.Size = new System.Drawing.Size(236, 114);
+            this.btnReportes.Size = new System.Drawing.Size(252, 114);
             this.btnReportes.TabIndex = 2;
             this.btnReportes.Text = "Reportes";
             this.btnReportes.UseVisualStyleBackColor = true;
@@ -73,7 +73,7 @@
             this.btnClientes.Location = new System.Drawing.Point(12, 146);
             this.btnClientes.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnClientes.Name = "btnClientes";
-            this.btnClientes.Size = new System.Drawing.Size(236, 114);
+            this.btnClientes.Size = new System.Drawing.Size(267, 114);
             this.btnClientes.TabIndex = 3;
             this.btnClientes.Text = "Clientes";
             this.btnClientes.UseVisualStyleBackColor = true;
@@ -83,7 +83,7 @@
             this.btnVendedores.Location = new System.Drawing.Point(285, 146);
             this.btnVendedores.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnVendedores.Name = "btnVendedores";
-            this.btnVendedores.Size = new System.Drawing.Size(236, 114);
+            this.btnVendedores.Size = new System.Drawing.Size(261, 114);
             this.btnVendedores.TabIndex = 4;
             this.btnVendedores.Text = "Vendedores";
             this.btnVendedores.UseVisualStyleBackColor = true;
@@ -94,17 +94,18 @@
             this.button5.Location = new System.Drawing.Point(552, 146);
             this.button5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(236, 114);
+            this.button5.Size = new System.Drawing.Size(252, 114);
             this.button5.TabIndex = 5;
-            this.button5.Text = "-";
+            this.button5.Text = "Opciones Base de Datos";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(552, 290);
+            this.btnSalir.Location = new System.Drawing.Point(552, 279);
             this.btnSalir.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(236, 114);
+            this.btnSalir.Size = new System.Drawing.Size(252, 114);
             this.btnSalir.TabIndex = 6;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
@@ -114,7 +115,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(804, 421);
+            this.ClientSize = new System.Drawing.Size(816, 404);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.btnVendedores);

@@ -145,5 +145,49 @@ namespace Automotores
                 }
             }
         }
+
+        public void cargarFiltrado(string query, DataGridView dg)
+        {
+            using (conexion)
+            {
+                try
+                {
+                    this.conectar();
+                    this.comando.CommandText = query;
+                    using (SqlDataReader lector = comando.ExecuteReader())
+                    {
+                        DataTable t = new DataTable();
+                        t.Load(lector);
+                        dg.AutoGenerateColumns = true;
+                        dg.DataSource = t;
+                        dg.Refresh();
+                    }
+                    this.desconectar();
+                }
+                catch (SqlException Exception)
+                {
+                    MessageBox.Show(Exception.ToString());
+                }
+            }
+        }
+
+        public DataTable consultarTipoDato(string nTab, string nCol)
+        {
+            DataTable dt = new DataTable();
+            this.conectar();
+            this.comando.CommandType = CommandType.Text;
+            this.comando.CommandText = "SELECT DATA_TYPE FROM information_schema.columns WHERE TABLE_NAME = '" 
+                + nTab 
+                + "' AND COLUMN_NAME = '" 
+                + nCol + "'";
+            this.dt.Load(comando.ExecuteReader());
+
+            this.desconectar();
+            return dt;
+        }
+
+
+
+
     }
 }

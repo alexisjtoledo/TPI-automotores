@@ -82,12 +82,19 @@ namespace Automotores
         // Evento cuando selecciono otra columna
         private void CboColumna_SelectionChangeCommitted(object sender, EventArgs e)
         {
+            /*
+            // Recargo el Visor con la nueva columna
+            aDatos.cargarDatagrid(nTab, nCol, dgvVisor);
+            */
+
             // Actualizo mi nueva selección
             nTab = cboTabla.GetItemText(this.cboTabla.SelectedValue);
             // Actualizo la variable
             nCol = cboColumna.GetItemText(this.cboColumna.SelectedValue);
-            // Recargo el Visor con la nueva columna
-            aDatos.cargarDatagrid(nTab, nCol, dgvVisor);
+            // Primero averiguar que tipo de dato es
+            string tipoDato;
+            tipoDato = metodos.obtenerTipoDato(nTab, nCol);
+            MessageBox.Show(tipoDato);
         }
 
         private void btnVolver_Click(object sender, EventArgs e)

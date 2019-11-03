@@ -155,5 +155,19 @@ namespace Automotores
             this.desconectar();
             return dt;
         }
+
+        public DataTable consultarTipoDato(string nTab, string nCol)
+        {
+            DataTable dt = new DataTable();
+            this.conectar();
+            this.comando.CommandType = CommandType.Text;
+            this.comando.CommandText = "SELECT DATA_TYPE FROM information_schema.columns WHERE TABLE_NAME = '" 
+                + nTab 
+                + "' AND COLUMN_NAME = '" 
+                + nCol + "'";
+            this.dt.Load(comando.ExecuteReader());
+            this.desconectar();
+            return dt;
+        }
     }
 }

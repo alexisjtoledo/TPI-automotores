@@ -36,7 +36,9 @@ namespace Automotores
             this.btnVendedores.Enabled = false;
         }
 
-
-        
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

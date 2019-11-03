@@ -40,6 +40,7 @@
             this.dgRespuesta = new System.Windows.Forms.DataGridView();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.txtConsulta = new System.Windows.Forms.RichTextBox();
+            this.btnVolver = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgRespuesta)).BeginInit();
             this.SuspendLayout();
             // 
@@ -49,7 +50,7 @@
             this.label2.Location = new System.Drawing.Point(13, 81);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(0, 20);
+            this.label2.Size = new System.Drawing.Size(0, 25);
             this.label2.TabIndex = 3;
             // 
             // btnConsulta1
@@ -161,7 +162,8 @@
             this.dgRespuesta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgRespuesta.Location = new System.Drawing.Point(12, 184);
             this.dgRespuesta.Name = "dgRespuesta";
-            this.dgRespuesta.Size = new System.Drawing.Size(1241, 457);
+            this.dgRespuesta.RowHeadersWidth = 51;
+            this.dgRespuesta.Size = new System.Drawing.Size(1241, 518);
             this.dgRespuesta.TabIndex = 20;
             // 
             // lblTitulo
@@ -169,7 +171,7 @@
             this.lblTitulo.AutoSize = true;
             this.lblTitulo.Location = new System.Drawing.Point(555, 70);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(154, 20);
+            this.lblTitulo.Size = new System.Drawing.Size(193, 25);
             this.lblTitulo.TabIndex = 22;
             this.lblTitulo.Text = "Texto de la consulta:";
             // 
@@ -187,15 +189,26 @@
             this.txtConsulta.Location = new System.Drawing.Point(11, 96);
             this.txtConsulta.Name = "txtConsulta";
             this.txtConsulta.ReadOnly = true;
-            this.txtConsulta.Size = new System.Drawing.Size(1242, 80);
+            this.txtConsulta.Size = new System.Drawing.Size(1242, 130);
             this.txtConsulta.TabIndex = 23;
             this.txtConsulta.Text = "";
             // 
+            // btnVolver
+            // 
+            this.btnVolver.Location = new System.Drawing.Point(934, 709);
+            this.btnVolver.Name = "btnVolver";
+            this.btnVolver.Size = new System.Drawing.Size(319, 42);
+            this.btnVolver.TabIndex = 24;
+            this.btnVolver.Text = "Volver";
+            this.btnVolver.UseVisualStyleBackColor = true;
+            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
+            // 
             // frmPrecargadas
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1265, 655);
+            this.ClientSize = new System.Drawing.Size(1265, 763);
+            this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.txtConsulta);
             this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.dgRespuesta);
@@ -232,5 +245,6 @@
         private System.Windows.Forms.DataGridView dgRespuesta;
         private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.RichTextBox txtConsulta;
+        private System.Windows.Forms.Button btnVolver;
     }
 }

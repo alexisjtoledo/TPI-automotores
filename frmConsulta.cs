@@ -92,5 +92,10 @@ namespace Automotores
             // Recargo el Visor con la nueva columna
             aDatos.cargarDatagrid(nTab, nCol, dgvVisor);
         }
+
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

@@ -12,6 +12,8 @@ namespace Automotores
 {
     public partial class frmPrecargadas : Form
     {
+        // Inicializo el Acceso a Datos
+        AccesoDatos aDatos = new AccesoDatos();
         public frmPrecargadas()
         {
             InitializeComponent();
@@ -20,7 +22,7 @@ namespace Automotores
         //  Eventos On Click
         private void BtnConsulta1_Click(object sender, EventArgs e)
         {
-
+            dgRespuesta.DataSource = aDatos.ejecutarVista("");
         }
 
         private void BtnConsulta2_Click(object sender, EventArgs e)
@@ -143,5 +145,9 @@ namespace Automotores
             txtConsulta.Text = "";
         }
 
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

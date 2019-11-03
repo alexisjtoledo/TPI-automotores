@@ -41,17 +41,5 @@ namespace Automotores
             combo.DisplayMember = t.Columns[1].ColumnName;
             combo.DropDownStyle = ComboBoxStyle.DropDownList;
         }
-
-
-        
-
-
-
-
-
-
-
-
-
     }
 }

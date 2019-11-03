@@ -160,10 +160,10 @@
             // dgRespuesta
             // 
             this.dgRespuesta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgRespuesta.Location = new System.Drawing.Point(12, 184);
+            this.dgRespuesta.Location = new System.Drawing.Point(12, 189);
             this.dgRespuesta.Name = "dgRespuesta";
             this.dgRespuesta.RowHeadersWidth = 51;
-            this.dgRespuesta.Size = new System.Drawing.Size(1241, 518);
+            this.dgRespuesta.Size = new System.Drawing.Size(1241, 513);
             this.dgRespuesta.TabIndex = 20;
             // 
             // lblTitulo
@@ -189,7 +189,7 @@
             this.txtConsulta.Location = new System.Drawing.Point(11, 96);
             this.txtConsulta.Name = "txtConsulta";
             this.txtConsulta.ReadOnly = true;
-            this.txtConsulta.Size = new System.Drawing.Size(1242, 130);
+            this.txtConsulta.Size = new System.Drawing.Size(1242, 87);
             this.txtConsulta.TabIndex = 23;
             this.txtConsulta.Text = "";
             // 

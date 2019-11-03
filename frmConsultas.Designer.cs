@@ -36,7 +36,7 @@
             // 
             // btnCargarInserts
             // 
-            this.btnCargarInserts.Location = new System.Drawing.Point(12, 12);
+            this.btnCargarInserts.Location = new System.Drawing.Point(595, 11);
             this.btnCargarInserts.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCargarInserts.Name = "btnCargarInserts";
             this.btnCargarInserts.Size = new System.Drawing.Size(299, 139);
@@ -47,10 +47,10 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(611, 160);
+            this.button1.Location = new System.Drawing.Point(595, 157);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(283, 90);
+            this.button1.Size = new System.Drawing.Size(297, 90);
             this.button1.TabIndex = 1;
             this.button1.Text = "Volver al Menu Principal";
             this.button1.UseVisualStyleBackColor = true;
@@ -58,7 +58,7 @@
             // 
             // btnVistasCargadas
             // 
-            this.btnVistasCargadas.Location = new System.Drawing.Point(611, 12);
+            this.btnVistasCargadas.Location = new System.Drawing.Point(306, 11);
             this.btnVistasCargadas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnVistasCargadas.Name = "btnVistasCargadas";
             this.btnVistasCargadas.Size = new System.Drawing.Size(283, 139);
@@ -69,7 +69,7 @@
             // 
             // btnBuscador
             // 
-            this.btnBuscador.Location = new System.Drawing.Point(316, 12);
+            this.btnBuscador.Location = new System.Drawing.Point(12, 11);
             this.btnBuscador.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnBuscador.Name = "btnBuscador";
             this.btnBuscador.Size = new System.Drawing.Size(288, 139);

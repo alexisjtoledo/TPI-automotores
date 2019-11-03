@@ -11,7 +11,6 @@ using System.Windows.Forms;
 
 namespace Automotores
 {
-
     public partial class frmConsulta : Form
     {
         // Inicializo el Acceso a Datos
@@ -46,8 +45,6 @@ namespace Automotores
             // Por defecto el combo columnas está vacío
             cboColumna.SelectedIndex = -1;
         }
-
-
 
         private void Habilitar(bool x)
         {

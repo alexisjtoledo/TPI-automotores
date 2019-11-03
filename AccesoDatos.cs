@@ -31,7 +31,7 @@ namespace Automotores
         }
         public void conectar()
         {
-            this.conexion.ConnectionString = @"Data Source=DESKTOP-2UN2K3I\MYSQL17;Initial Catalog=Automotores;Integrated Security=True";
+            this.conexion.ConnectionString = @"Data Source=ALEXIS-PC;Initial Catalog=Automotores;Integrated Security=True";
             this.conexion.Open();
             this.comando.Connection = conexion;
             this.comando.CommandType = CommandType.Text;
@@ -121,14 +121,14 @@ namespace Automotores
             this.desconectar();
         }
 
-        public void cargarDatagrid(string tabla, string columna, DataGridView dg)
+        public void cargarDatagrid(string query, DataGridView dg)
         {
             using (conexion)
             {
                 try
                 {
                     this.conectar();
-                    this.comando.CommandText = "SELECT " + columna + " FROM " + tabla;
+                    this.comando.CommandText = query;
                     using (SqlDataReader lector = comando.ExecuteReader())
                     {
                         DataTable t = new DataTable();

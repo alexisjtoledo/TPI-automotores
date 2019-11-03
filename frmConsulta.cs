@@ -11,7 +11,6 @@ using System.Windows.Forms;
 
 namespace Automotores
 {
-
     public partial class frmConsulta : Form
     {
         // Inicializo el Acceso a Datos
@@ -46,8 +45,6 @@ namespace Automotores
             // Por defecto el combo columnas está vacío
             cboColumna.SelectedIndex = -1;
         }
-
-
 
         private void Habilitar(bool x)
         {
@@ -91,6 +88,13 @@ namespace Automotores
             nCol = cboColumna.GetItemText(this.cboColumna.SelectedValue);
             // Recargo el Visor con la nueva columna
             aDatos.cargarDatagrid(nTab, nCol, dgvVisor);
+        }
+
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmConsultas fcc = new frmConsultas();
+            fcc.ShowDialog();
         }
     }
 }

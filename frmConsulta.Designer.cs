@@ -49,6 +49,7 @@
             this.rbtDescendente = new System.Windows.Forms.RadioButton();
             this.btnConsultar = new System.Windows.Forms.Button();
             this.dgvVisor = new System.Windows.Forms.DataGridView();
+            this.btnVolver = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVisor)).BeginInit();
             this.SuspendLayout();
             // 
@@ -59,7 +60,7 @@
             this.lblSelTabla.Location = new System.Drawing.Point(16, 20);
             this.lblSelTabla.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSelTabla.Name = "lblSelTabla";
-            this.lblSelTabla.Size = new System.Drawing.Size(157, 20);
+            this.lblSelTabla.Size = new System.Drawing.Size(194, 25);
             this.lblSelTabla.TabIndex = 0;
             this.lblSelTabla.Text = "Seleccionar Tabla:";
             // 
@@ -69,7 +70,7 @@
             this.lblSelColumna.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSelColumna.Location = new System.Drawing.Point(16, 94);
             this.lblSelColumna.Name = "lblSelColumna";
-            this.lblSelColumna.Size = new System.Drawing.Size(183, 20);
+            this.lblSelColumna.Size = new System.Drawing.Size(225, 25);
             this.lblSelColumna.TabIndex = 1;
             this.lblSelColumna.Text = "Seleccionar Columna:";
             // 
@@ -79,7 +80,7 @@
             this.lblFiltros.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFiltros.Location = new System.Drawing.Point(16, 168);
             this.lblFiltros.Name = "lblFiltros";
-            this.lblFiltros.Size = new System.Drawing.Size(92, 20);
+            this.lblFiltros.Size = new System.Drawing.Size(111, 25);
             this.lblFiltros.TabIndex = 2;
             this.lblFiltros.Text = "Filtrar por:";
             // 
@@ -89,7 +90,7 @@
             this.lblOrdenar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblOrdenar.Location = new System.Drawing.Point(16, 477);
             this.lblOrdenar.Name = "lblOrdenar";
-            this.lblOrdenar.Size = new System.Drawing.Size(110, 20);
+            this.lblOrdenar.Size = new System.Drawing.Size(135, 25);
             this.lblOrdenar.TabIndex = 3;
             this.lblOrdenar.Text = "Ordenar por:";
             // 
@@ -98,7 +99,7 @@
             this.lblContiene.AutoSize = true;
             this.lblContiene.Location = new System.Drawing.Point(18, 206);
             this.lblContiene.Name = "lblContiene";
-            this.lblContiene.Size = new System.Drawing.Size(77, 20);
+            this.lblContiene.Size = new System.Drawing.Size(97, 25);
             this.lblContiene.TabIndex = 4;
             this.lblContiene.Text = "Contiene:";
             // 
@@ -107,25 +108,25 @@
             this.lblEs.AutoSize = true;
             this.lblEs.Location = new System.Drawing.Point(16, 273);
             this.lblEs.Name = "lblEs";
-            this.lblEs.Size = new System.Drawing.Size(28, 20);
+            this.lblEs.Size = new System.Drawing.Size(35, 25);
             this.lblEs.TabIndex = 5;
             this.lblEs.Text = "Es";
             // 
             // lblEntre
             // 
             this.lblEntre.AutoSize = true;
-            this.lblEntre.Location = new System.Drawing.Point(17, 405);
+            this.lblEntre.Location = new System.Drawing.Point(17, 401);
             this.lblEntre.Name = "lblEntre";
-            this.lblEntre.Size = new System.Drawing.Size(60, 20);
+            this.lblEntre.Size = new System.Drawing.Size(75, 25);
             this.lblEntre.TabIndex = 6;
             this.lblEntre.Text = "Desde:";
             // 
             // lblY
             // 
             this.lblY.AutoSize = true;
-            this.lblY.Location = new System.Drawing.Point(123, 405);
+            this.lblY.Location = new System.Drawing.Point(132, 401);
             this.lblY.Name = "lblY";
-            this.lblY.Size = new System.Drawing.Size(56, 20);
+            this.lblY.Size = new System.Drawing.Size(69, 25);
             this.lblY.TabIndex = 7;
             this.lblY.Text = "Hasta:";
             // 
@@ -135,7 +136,7 @@
             this.cboTabla.Location = new System.Drawing.Point(20, 48);
             this.cboTabla.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cboTabla.Name = "cboTabla";
-            this.cboTabla.Size = new System.Drawing.Size(227, 28);
+            this.cboTabla.Size = new System.Drawing.Size(227, 33);
             this.cboTabla.TabIndex = 8;
             this.cboTabla.SelectedIndexChanged += new System.EventHandler(this.CboTabla_SelectedIndexChanged);
             this.cboTabla.SelectionChangeCommitted += new System.EventHandler(this.CboTabla_SelectionChangeCommitted);
@@ -146,7 +147,7 @@
             this.cboColumna.Location = new System.Drawing.Point(20, 122);
             this.cboColumna.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cboColumna.Name = "cboColumna";
-            this.cboColumna.Size = new System.Drawing.Size(227, 28);
+            this.cboColumna.Size = new System.Drawing.Size(227, 33);
             this.cboColumna.TabIndex = 9;
             this.cboColumna.SelectionChangeCommitted += new System.EventHandler(this.CboColumna_SelectionChangeCommitted);
             // 
@@ -155,7 +156,7 @@
             this.txtContiene.Location = new System.Drawing.Point(20, 229);
             this.txtContiene.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtContiene.Name = "txtContiene";
-            this.txtContiene.Size = new System.Drawing.Size(227, 26);
+            this.txtContiene.Size = new System.Drawing.Size(227, 30);
             this.txtContiene.TabIndex = 10;
             // 
             // txtValor
@@ -163,7 +164,7 @@
             this.txtValor.Location = new System.Drawing.Point(147, 331);
             this.txtValor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtValor.Name = "txtValor";
-            this.txtValor.Size = new System.Drawing.Size(79, 26);
+            this.txtValor.Size = new System.Drawing.Size(94, 30);
             this.txtValor.TabIndex = 11;
             // 
             // rbtIgual
@@ -173,7 +174,7 @@
             this.rbtIgual.Location = new System.Drawing.Point(20, 334);
             this.rbtIgual.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rbtIgual.Name = "rbtIgual";
-            this.rbtIgual.Size = new System.Drawing.Size(69, 20);
+            this.rbtIgual.Size = new System.Drawing.Size(84, 24);
             this.rbtIgual.TabIndex = 12;
             this.rbtIgual.TabStop = true;
             this.rbtIgual.Text = "igual a:";
@@ -186,7 +187,7 @@
             this.rbtMayor.Location = new System.Drawing.Point(20, 306);
             this.rbtMayor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rbtMayor.Name = "rbtMayor";
-            this.rbtMayor.Size = new System.Drawing.Size(78, 20);
+            this.rbtMayor.Size = new System.Drawing.Size(95, 24);
             this.rbtMayor.TabIndex = 13;
             this.rbtMayor.TabStop = true;
             this.rbtMayor.Text = "mayor a:";
@@ -199,7 +200,7 @@
             this.rbtMenor.Location = new System.Drawing.Point(20, 362);
             this.rbtMenor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rbtMenor.Name = "rbtMenor";
-            this.rbtMenor.Size = new System.Drawing.Size(78, 20);
+            this.rbtMenor.Size = new System.Drawing.Size(96, 24);
             this.rbtMenor.TabIndex = 14;
             this.rbtMenor.TabStop = true;
             this.rbtMenor.Text = "menor a:";
@@ -211,25 +212,25 @@
             this.dtpInicio.Location = new System.Drawing.Point(20, 428);
             this.dtpInicio.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtpInicio.Name = "dtpInicio";
-            this.dtpInicio.Size = new System.Drawing.Size(100, 26);
+            this.dtpInicio.Size = new System.Drawing.Size(107, 30);
             this.dtpInicio.TabIndex = 15;
             // 
             // dtpFin
             // 
             this.dtpFin.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFin.Location = new System.Drawing.Point(126, 428);
+            this.dtpFin.Location = new System.Drawing.Point(137, 428);
             this.dtpFin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtpFin.Name = "dtpFin";
-            this.dtpFin.Size = new System.Drawing.Size(100, 26);
+            this.dtpFin.Size = new System.Drawing.Size(110, 30);
             this.dtpFin.TabIndex = 16;
             // 
             // rbtAscendente
             // 
             this.rbtAscendente.AutoSize = true;
-            this.rbtAscendente.Location = new System.Drawing.Point(20, 505);
+            this.rbtAscendente.Location = new System.Drawing.Point(23, 515);
             this.rbtAscendente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rbtAscendente.Name = "rbtAscendente";
-            this.rbtAscendente.Size = new System.Drawing.Size(60, 24);
+            this.rbtAscendente.Size = new System.Drawing.Size(76, 29);
             this.rbtAscendente.TabIndex = 17;
             this.rbtAscendente.TabStop = true;
             this.rbtAscendente.Text = "ASC";
@@ -238,10 +239,10 @@
             // rbtDescendente
             // 
             this.rbtDescendente.AutoSize = true;
-            this.rbtDescendente.Location = new System.Drawing.Point(87, 505);
+            this.rbtDescendente.Location = new System.Drawing.Point(158, 515);
             this.rbtDescendente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rbtDescendente.Name = "rbtDescendente";
-            this.rbtDescendente.Size = new System.Drawing.Size(72, 24);
+            this.rbtDescendente.Size = new System.Drawing.Size(89, 29);
             this.rbtDescendente.TabIndex = 18;
             this.rbtDescendente.TabStop = true;
             this.rbtDescendente.Text = "DESC";
@@ -249,9 +250,9 @@
             // 
             // btnConsultar
             // 
-            this.btnConsultar.Location = new System.Drawing.Point(55, 573);
+            this.btnConsultar.Location = new System.Drawing.Point(22, 549);
             this.btnConsultar.Name = "btnConsultar";
-            this.btnConsultar.Size = new System.Drawing.Size(157, 51);
+            this.btnConsultar.Size = new System.Drawing.Size(225, 108);
             this.btnConsultar.TabIndex = 19;
             this.btnConsultar.Text = "Consultar";
             this.btnConsultar.UseVisualStyleBackColor = true;
@@ -261,14 +262,26 @@
             this.dgvVisor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvVisor.Location = new System.Drawing.Point(279, 12);
             this.dgvVisor.Name = "dgvVisor";
-            this.dgvVisor.Size = new System.Drawing.Size(808, 630);
+            this.dgvVisor.RowHeadersWidth = 51;
+            this.dgvVisor.Size = new System.Drawing.Size(808, 645);
             this.dgvVisor.TabIndex = 20;
+            // 
+            // btnVolver
+            // 
+            this.btnVolver.Location = new System.Drawing.Point(835, 663);
+            this.btnVolver.Name = "btnVolver";
+            this.btnVolver.Size = new System.Drawing.Size(252, 51);
+            this.btnVolver.TabIndex = 21;
+            this.btnVolver.Text = "Volver";
+            this.btnVolver.UseVisualStyleBackColor = true;
+            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
             // frmConsulta
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1099, 654);
+            this.ClientSize = new System.Drawing.Size(1099, 726);
+            this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.dgvVisor);
             this.Controls.Add(this.btnConsultar);
             this.Controls.Add(this.rbtDescendente);
@@ -324,5 +337,6 @@
         private System.Windows.Forms.RadioButton rbtDescendente;
         private System.Windows.Forms.Button btnConsultar;
         private System.Windows.Forms.DataGridView dgvVisor;
+        private System.Windows.Forms.Button btnVolver;
     }
 }

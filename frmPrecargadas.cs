@@ -12,6 +12,8 @@ namespace Automotores
 {
     public partial class frmPrecargadas : Form
     {
+        // Inicializo el Acceso a Datos
+        AccesoDatos aDatos = new AccesoDatos();
         public frmPrecargadas()
         {
             InitializeComponent();
@@ -20,41 +22,41 @@ namespace Automotores
         //  Eventos On Click
         private void BtnConsulta1_Click(object sender, EventArgs e)
         {
-
+            dgRespuesta.DataSource = aDatos.ejecutarVista("Vista_Consulta_1");
         }
 
         private void BtnConsulta2_Click(object sender, EventArgs e)
         {
-
+            dgRespuesta.DataSource = aDatos.ejecutarVista("Vista_Consulta_2");
         }
         private void BtnConsulta3_Click(object sender, EventArgs e)
         {
-
+            dgRespuesta.DataSource = aDatos.ejecutarVista("Vista_Consulta_3");
         }
 
         private void BtnConsulta4_Click(object sender, EventArgs e)
         {
-
+            dgRespuesta.DataSource = aDatos.ejecutarVista("Vista_Consulta_4");
         }
 
         private void BtnConsulta5_Click(object sender, EventArgs e)
         {
-
+            dgRespuesta.DataSource = aDatos.ejecutarVista("Vista_Consulta_5");
         }
 
         private void BtnConsulta6_Click(object sender, EventArgs e)
         {
-
+            dgRespuesta.DataSource = aDatos.ejecutarVista("Vista_Consulta_6");
         }
 
         private void BtnConsulta7_Click(object sender, EventArgs e)
         {
-
+            dgRespuesta.DataSource = aDatos.ejecutarVista("Vista_Consulta_7");
         }
 
         private void BtnConsulta8_Click(object sender, EventArgs e)
         {
-
+            dgRespuesta.DataSource = aDatos.ejecutarVista("Vista_Consulta_8");
         }
 
         // Eventos On Hover
@@ -143,5 +145,9 @@ namespace Automotores
             txtConsulta.Text = "";
         }
 
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

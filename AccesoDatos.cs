@@ -155,5 +155,13 @@ namespace Automotores
             this.desconectar();
             return dt;
         }
+
+        public void ejecutarPA(string nombreProcedure)
+        {
+            this.conectar();
+            this.comando.CommandText = "EXEC "+nombreProcedure;
+            this.comando.ExecuteNonQuery();
+            this.desconectar();
+        }
     }
 }

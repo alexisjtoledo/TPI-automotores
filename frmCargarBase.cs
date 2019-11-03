@@ -12,6 +12,7 @@ namespace Automotores
 {
     public partial class frmCargarBase : Form
     {
+        AccesoDatos aDatos = new AccesoDatos();
         public frmCargarBase()
         {
             InitializeComponent();
@@ -30,6 +31,20 @@ namespace Automotores
                 // Funcion Borrar Base
                 //Close();
             }
+        }
+
+        private void btnCargarData_Click(object sender, EventArgs e)
+        {
+            this.aDatos.ejecutarPA("cargar_datos");
+            MessageBox.Show("Ejecucion con exito");
+            btnCargarData.Enabled = false;
+        }
+
+        private void btnCargarStructure_Click(object sender, EventArgs e)
+        {
+            this.aDatos.ejecutarPA("cargar_estructura");
+            MessageBox.Show("Ejecucion con exito");
+            btnCargarStructure.Enabled = false;
         }
     }
 }

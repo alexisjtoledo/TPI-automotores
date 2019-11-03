@@ -30,7 +30,6 @@
         {
             this.btnCargarStructure = new System.Windows.Forms.Button();
             this.btnCargarData = new System.Windows.Forms.Button();
-            this.btnDeleteBase = new System.Windows.Forms.Button();
             this.btnVolver = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -40,8 +39,9 @@
             this.btnCargarStructure.Name = "btnCargarStructure";
             this.btnCargarStructure.Size = new System.Drawing.Size(278, 141);
             this.btnCargarStructure.TabIndex = 0;
-            this.btnCargarStructure.Text = "Cargar Extructura";
+            this.btnCargarStructure.Text = "Cargar Estructura";
             this.btnCargarStructure.UseVisualStyleBackColor = true;
+            this.btnCargarStructure.Click += new System.EventHandler(this.btnCargarStructure_Click);
             // 
             // btnCargarData
             // 
@@ -51,22 +51,13 @@
             this.btnCargarData.TabIndex = 1;
             this.btnCargarData.Text = "Cargar Datos";
             this.btnCargarData.UseVisualStyleBackColor = true;
-            // 
-            // btnDeleteBase
-            // 
-            this.btnDeleteBase.Location = new System.Drawing.Point(581, 12);
-            this.btnDeleteBase.Name = "btnDeleteBase";
-            this.btnDeleteBase.Size = new System.Drawing.Size(272, 141);
-            this.btnDeleteBase.TabIndex = 2;
-            this.btnDeleteBase.Text = "Borrar Base";
-            this.btnDeleteBase.UseVisualStyleBackColor = true;
-            this.btnDeleteBase.Click += new System.EventHandler(this.btnDeleteBase_Click);
+            this.btnCargarData.Click += new System.EventHandler(this.btnCargarData_Click);
             // 
             // btnVolver
             // 
-            this.btnVolver.Location = new System.Drawing.Point(581, 159);
+            this.btnVolver.Location = new System.Drawing.Point(296, 159);
             this.btnVolver.Name = "btnVolver";
-            this.btnVolver.Size = new System.Drawing.Size(272, 88);
+            this.btnVolver.Size = new System.Drawing.Size(279, 88);
             this.btnVolver.TabIndex = 3;
             this.btnVolver.Text = "Volver";
             this.btnVolver.UseVisualStyleBackColor = true;
@@ -76,9 +67,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(865, 259);
+            this.ClientSize = new System.Drawing.Size(589, 259);
             this.Controls.Add(this.btnVolver);
-            this.Controls.Add(this.btnDeleteBase);
             this.Controls.Add(this.btnCargarData);
             this.Controls.Add(this.btnCargarStructure);
             this.Name = "frmCargarBase";
@@ -91,7 +81,6 @@
 
         private System.Windows.Forms.Button btnCargarStructure;
         private System.Windows.Forms.Button btnCargarData;
-        private System.Windows.Forms.Button btnDeleteBase;
         private System.Windows.Forms.Button btnVolver;
     }
 }

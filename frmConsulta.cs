@@ -21,8 +21,14 @@ namespace Automotores
         string nTab;
         // Variable para almacenar la columna en la que estoy.
         string nCol;
-
-
+        // Variable para almecenar la query.
+        string query;
+        // Variables para el filtro Between.
+        string desde;
+        string hasta;
+        // Variable para el filtro comparador.
+        string comparador;
+        
         public frmConsulta()
         {
             InitializeComponent();
@@ -31,27 +37,22 @@ namespace Automotores
         private void FrmConsulta_Load(object sender, EventArgs e)
         {
             // Deshabilito todos los filtros para arrancar
-            Habilitar(false);
+            // Habilitar(false);
             // Cargo Combo Tablas
             metodos.CargarTodasTablas(cboTabla);
-            // Actualizo la variable tablas
+            // Actualizo las variables tabla/Columna
             nTab = cboTabla.GetItemText(this.cboTabla.SelectedValue);
+            nCol = cboColumna.GetItemText(this.cboColumna.SelectedValue);
             // Cargo Combo Columnas
             metodos.CargarTodasColumnas(nTab, cboColumna);
-            // Por defecto selecciono todas las columnas
-            nCol = "*";
             // Inicializo el programa con la primer tabla cargada por defecto
-            aDatos.cargarDatagrid(nTab, nCol, dgvVisor);
-            // Por defecto el combo columnas está vacío
-            cboColumna.SelectedIndex = -1;
+            aDatos.cargarDatagrid("SELECT * FROM " + nTab, dgvVisor);
         }
 
         private void Habilitar(bool x)
         {
             this.txtContiene.Enabled = x;
             this.txtValor.Enabled = x;
-            this.rbtAscendente.Enabled = x;
-            this.rbtDescendente.Enabled = x;
             this.rbtIgual.Enabled = x;
             this.rbtMayor.Enabled = x;
             this.rbtMenor.Enabled = x;
@@ -67,27 +68,24 @@ namespace Automotores
         // Evento cuando selecciono otra tabla
         private void CboTabla_SelectionChangeCommitted(object sender, EventArgs e)
         {
-            // Actualizo mi nueva selección
+            // Actualizo las variables tabla/Columna
             nTab = cboTabla.GetItemText(this.cboTabla.SelectedValue);
-            // Actualizo para que muestre todas las columnas hasta que seleccione una
-            nCol = "*";
+            nCol = cboColumna.GetItemText(this.cboColumna.SelectedValue);
             // Actualizo el combo de columnas
             metodos.CargarTodasColumnas(nTab, cboColumna);
             // Actualizo el visor con la info de la tabla
-            aDatos.cargarDatagrid(nTab, nCol, dgvVisor);
-            // Dejo el combo vacío por defecto
-            cboColumna.SelectedIndex = -1;
+            aDatos.cargarDatagrid("SELECT * FROM " + nTab, dgvVisor);
+            // Dejo la primer columna seleccionada por defecto
+            cboColumna.SelectedIndex = 0;
         }
 
         // Evento cuando selecciono otra columna
         private void CboColumna_SelectionChangeCommitted(object sender, EventArgs e)
         {
-            // Actualizo mi nueva selección
+            // Actualizo las variables tabla/Columna
             nTab = cboTabla.GetItemText(this.cboTabla.SelectedValue);
-            // Actualizo la variable
             nCol = cboColumna.GetItemText(this.cboColumna.SelectedValue);
-            // Recargo el Visor con la nueva columna
-            aDatos.cargarDatagrid(nTab, nCol, dgvVisor);
+
         }
 
         private void btnVolver_Click(object sender, EventArgs e)
@@ -96,5 +94,86 @@ namespace Automotores
             frmConsultas fcc = new frmConsultas();
             fcc.ShowDialog();
         }
+
+        // FILTRO LIKE
+        private void TxtContiene_TextChanged(object sender, EventArgs e)
+        {
+            this.query = "SELECT * FROM " +
+                            nTab +
+                            " WHERE " + nCol + 
+                            " LIKE '%" + txtContiene.Text + "%'";
+        }
+
+        // FILTROS COMPARADORES
+
+        private void crearQueryComparador()
+        {
+            nTab = cboTabla.GetItemText(this.cboTabla.SelectedValue);
+            nCol = cboColumna.GetItemText(this.cboColumna.SelectedValue);
+            if (rbtIgual.Checked)
+            {
+                comparador = "=";
+            }
+            else if (rbtMayor.Checked)
+            {
+                comparador = ">";
+            }
+            else if (rbtMenor.Checked)
+            {
+                comparador = "<";
+            }
+            this.query = "SELECT * FROM " +
+                            nTab +
+                            " WHERE " + nCol + " " +
+                            comparador + " " + txtValor.Text;
+        }
+        private void RbtMayor_CheckedChanged(object sender, EventArgs e)
+        {
+            crearQueryComparador();
+        }
+
+        private void RbtIgual_CheckedChanged(object sender, EventArgs e)
+        {
+            crearQueryComparador();
+        }
+
+        private void RbtMenor_CheckedChanged(object sender, EventArgs e)
+        {
+            crearQueryComparador();
+        }
+
+        private void TxtValor_TextChanged(object sender, EventArgs e)
+        {
+            crearQueryComparador();
+        }
+
+        //FILTRO BETWEEN
+        private void DtpInicio_ValueChanged(object sender, EventArgs e)
+        {
+            
+            this.desde = String.Format("{0:MM/dd/yyyy}", dtpInicio.Value);
+            this.query = "SELECT * FROM " +
+                            nTab +
+                            " WHERE " + nCol + 
+                            " BETWEEN '" + this.desde + 
+                            "' AND '" + this.hasta + "'";
+        }
+
+        private void DtpFin_ValueChanged(object sender, EventArgs e)
+        {
+            this.hasta = String.Format("{0:MM/dd/yyyy}", dtpInicio.Value);
+            this.query = "SELECT * FROM " +
+                            nTab +
+                            " WHERE " + nCol +
+                            " BETWEEN '" + this.desde +
+                            "' AND '" + this.hasta + "'";
+        }
+
+        private void BtnConsultar_Click(object sender, EventArgs e)
+        {
+            aDatos.cargarDatagrid(this.query, dgvVisor);
+        }
+
+        
     }
 }

@@ -41,5 +41,14 @@ namespace Automotores
             combo.DisplayMember = t.Columns[1].ColumnName;
             combo.DropDownStyle = ComboBoxStyle.DropDownList;
         }
+
+        public string obtenerTipoDato(string nTab, string nCol)
+        {
+            DataTable t = new DataTable();
+            string tipoDato;
+            t = aDatos.consultarTipoDato(nTab, nCol);
+            tipoDato = t.Columns[0].ColumnName;
+            return tipoDato;
+        }
     }
 }

@@ -1,0 +1,286 @@
+--CREATE DATABASE Automotores;
+
+USE Automotores;
+
+CREATE TABLE Marcas(
+	id_marca INT IDENTITY(1,1),
+	nombre VARCHAR(30),
+	CONSTRAINT pk_marcas PRIMARY KEY(id_marca)
+);
+
+CREATE TABLE Modelos(
+	id_modelo INT IDENTITY(1,1),
+	nombre VARCHAR(30),
+	id_marca INT,
+	CONSTRAINT pk_modelos PRIMARY KEY(id_modelo),
+	CONSTRAINT fk_marca_modelo_id FOREIGN KEY(id_marca)
+	REFERENCES Marcas(id_marca)
+);
+
+CREATE TABLE Tipos_de_Contacto(
+	id_tipo_contacto INT IDENTITY(1,1),
+	nombre VARCHAR(30),
+	CONSTRAINT pk_tipos_contacto PRIMARY KEY(id_tipo_contacto)
+);
+
+CREATE TABLE Contactos(
+	id_contacto INT IDENTITY(1,1),
+	id_persona INT,	
+	contacto VARCHAR(30),
+	id_tipo_contacto INT,
+	CONSTRAINT pk_contactos PRIMARY KEY(id_contacto),
+	CONSTRAINT fk_contacto_tipo_contacto FOREIGN KEY(id_tipo_contacto)
+	REFERENCES Tipos_de_Contacto(id_tipo_contacto)
+);
+
+CREATE TABLE Paises(
+	id_pais INT IDENTITY(1,1),	
+	nombre VARCHAR(30),
+	CONSTRAINT pk_paises PRIMARY KEY(id_pais),
+);
+
+CREATE TABLE Provincias(
+	id_provincia INT IDENTITY(1,1),
+	nombre VARCHAR(30),
+	id_pais INT,
+	CONSTRAINT pk_provincias PRIMARY KEY(id_provincia),
+	CONSTRAINT fk_provincia_paises FOREIGN KEY(id_pais)
+	REFERENCES Paises(id_pais)
+);
+
+CREATE TABLE Localidades(
+	id_localidad INT IDENTITY(1,1),
+	nombre VARCHAR(30),
+	id_provincia INT,
+	CONSTRAINT pk_localidades PRIMARY KEY(id_localidad),
+	CONSTRAINT fk_localidad_provincia FOREIGN KEY(id_provincia)
+	REFERENCES Provincias(id_provincia)
+);
+
+CREATE TABLE Barrios(
+	id_barrio INT IDENTITY(1,1),
+	nombre VARCHAR(30),
+	id_localidad INT,
+	CONSTRAINT pk_barrios PRIMARY KEY(id_barrio),
+	CONSTRAINT fk_barrio_localidad FOREIGN KEY(id_localidad)
+	REFERENCES Localidades(id_localidad)
+);
+
+CREATE TABLE Direcciones(
+	id_direccion INT IDENTITY(1,1),
+	nombre_calle VARCHAR(30),
+	num_calle VARCHAR(10),
+	id_barrio INT,
+	id_persona INT,
+	CONSTRAINT pk_direcciones PRIMARY KEY(id_direccion),
+	CONSTRAINT fk_direccion_barrio FOREIGN KEY(id_barrio)
+	REFERENCES Barrios(id_barrio)
+);
+
+CREATE TABLE Tipos_de_Documento(
+	id_tipo_doc INT IDENTITY(1,1),
+	nombre VARCHAR(35),
+	CONSTRAINT pk_tipos_documento PRIMARY KEY(id_tipo_doc)
+);
+
+CREATE TABLE Generos(
+	id_genero INT IDENTITY(1,1),
+	nombre VARCHAR(20),
+	CONSTRAINT pk_generos PRIMARY KEY(id_genero)
+);
+
+CREATE TABLE Cargos_de_Empleado(
+	id_cargo_empleado INT IDENTITY(1,1),
+	nombre VARCHAR(25)
+	CONSTRAINT pk_cargos_empleado PRIMARY KEY(id_cargo_empleado)
+);
+
+CREATE TABLE Tipos_de_Cliente(
+	id_tipo_cliente INT IDENTITY(1,1),
+	nombre VARCHAR(25)
+	CONSTRAINT pk_tipos_cliente PRIMARY KEY(id_tipo_cliente)
+);
+
+CREATE TABLE Tipos_de_Producto(
+	id_tipo_producto INT IDENTITY(1,1),
+	nombre VARCHAR(30)
+	CONSTRAINT pk_tipos_producto PRIMARY KEY(id_tipo_producto)
+);
+
+CREATE TABLE Tipos_de_Factura(
+	id_tipo_factura INT IDENTITY(1,1),
+	nombre VARCHAR(30)
+	CONSTRAINT pk_tipos_factura PRIMARY KEY(id_tipo_factura)
+);
+
+CREATE TABLE Formas_de_Pago(
+	id_forma_pago INT IDENTITY(1,1),
+	nombre VARCHAR(30),
+    interes DECIMAL(10,2),
+	cuotas INTEGER,
+	CONSTRAINT pk_formas_pago PRIMARY KEY(id_forma_pago)
+);
+
+CREATE TABLE Personas(
+	id_persona INT IDENTITY(1,1),
+	nombre VARCHAR(50),
+	apellido VARCHAR(50),
+	id_tipo_doc INT,
+	num_doc VARCHAR(35),
+	id_genero INT,
+	fecha_nac DATETIME,
+	CONSTRAINT pk_personas_id PRIMARY KEY(id_persona),
+	CONSTRAINT fk_persona_tipos_doc FOREIGN KEY(id_tipo_doc)
+    REFERENCES Tipos_de_Documento(id_tipo_doc),
+	CONSTRAINT fk_personas_generos FOREIGN KEY(id_genero)
+	REFERENCES Generos(id_genero)
+);
+
+ALTER TABLE Contactos 
+ADD CONSTRAINT fk_contacto_personas FOREIGN KEY(id_persona) 
+REFERENCES Personas(id_persona);
+
+ALTER TABLE Direcciones 
+ADD CONSTRAINT fk_direccion_personas FOREIGN KEY(id_persona) 
+REFERENCES Personas(id_persona);
+
+CREATE TABLE Productos(
+	id_producto INT IDENTITY(1,1),
+	nombre VARCHAR(30),
+	precio DECIMAL(10,2),
+	id_tipo_producto INT,
+	color VARCHAR(10),
+	detalles TEXT,
+	id_modelo INT,
+	stock_minimo BIGINT,
+	stock BIGINT,
+	CONSTRAINT pk_productos PRIMARY KEY(id_producto),
+	CONSTRAINT fk_productos_tipos_producto FOREIGN KEY(id_tipo_producto)
+	REFERENCES Tipos_de_Producto(id_tipo_producto),
+	CONSTRAINT fk_productos_modelos FOREIGN KEY(id_modelo)
+	REFERENCES Modelos(id_modelo)
+);
+
+CREATE TABLE Historial_de_Precios(
+	id_historial INT IDENTITY(1,1),
+	id_producto INT,
+	fecha_desde DATETIME,
+	fecha_hasta DATETIME,
+	precio DECIMAL(10,2),
+	CONSTRAINT pk_historial PRIMARY KEY(id_historial),
+	CONSTRAINT fk_historial_productos FOREIGN KEY(id_producto)
+	REFERENCES Productos(id_producto)
+);
+
+CREATE TABLE Clientes(
+	id_cliente INT IDENTITY(1,1),
+	id_persona INT,
+	id_tipo_cliente INT,
+	fecha_alta DATETIME,
+	CONSTRAINT pk_clientes PRIMARY KEY(id_cliente),
+	CONSTRAINT fk_clientes_personas FOREIGN KEY(id_persona)
+	REFERENCES Personas(id_persona),
+	CONSTRAINT fk_clientes_tipos_cliente FOREIGN KEY(id_tipo_cliente)
+	REFERENCES Tipos_de_Cliente(id_tipo_cliente)
+);
+
+CREATE TABLE Empleados(
+	id_empleado INT IDENTITY(1,1),
+	id_persona INT,
+	id_cargo_empleado INT,
+	fecha_insercion DATETIME,
+	CONSTRAINT pk_empleados PRIMARY KEY(id_empleado),
+	CONSTRAINT fk_empleados_personas FOREIGN KEY(id_persona)
+	REFERENCES Personas(id_persona),
+	CONSTRAINT fk_empleados_cargos_empleado FOREIGN KEY(id_cargo_empleado)
+	REFERENCES Cargos_de_Empleado(id_cargo_empleado)
+);
+
+CREATE TABLE Facturas(
+	num_factura INT IDENTITY(1,1),
+	id_cliente INT,
+	id_empleado INT,
+	fecha_factura DATETIME,
+	observaciones TEXT,
+	id_tipo_factura INT,
+	descuento DECIMAL(10,2),
+	CONSTRAINT pk_facturas PRIMARY KEY(num_factura),
+	CONSTRAINT fk_facturas_clientes FOREIGN KEY(id_cliente)
+	REFERENCES Clientes(id_cliente),
+	CONSTRAINT fk_facturas_empleados FOREIGN KEY(id_empleado)
+	REFERENCES Empleados(id_empleado),
+	CONSTRAINT fk_facturas_tipos_factura FOREIGN KEY(id_tipo_factura)
+	REFERENCES Tipos_de_Factura(id_tipo_factura)
+);
+
+CREATE TABLE Detalles_de_Factura(
+	id_detalle_factura INT IDENTITY(1,1),
+	num_factura INT,
+	id_producto INT,
+	cantidad INTEGER,
+	precio_unitario DECIMAL(10,2),
+	CONSTRAINT pk_detalles_factura PRIMARY KEY(id_detalle_factura),
+	CONSTRAINT fk_detalles_num_factura FOREIGN KEY(num_factura)
+	REFERENCES Facturas(num_factura),
+	CONSTRAINT fk_detalles_producto FOREIGN KEY(id_producto)
+	REFERENCES Productos(id_producto)
+);
+
+CREATE TABLE Formas_de_Pago_por_Factura(
+	id INT IDENTITY(1,1),
+	num_factura INT,
+	id_forma_pago INT,
+	monto DECIMAL(10,2),
+	nro_couto INT,
+	CONSTRAINT pk_formas_x_factura PRIMARY KEY(id),
+	CONSTRAINT fk_formas_x_factura_factura FOREIGN KEY(num_factura)
+	REFERENCES Facturas(num_factura),
+	CONSTRAINT fk_formas_x_factura_formas_pago FOREIGN KEY(id_forma_pago)
+	REFERENCES Formas_de_Pago(id_forma_pago)
+);
+
+CREATE TABLE Ordenes_de_Pedido(
+	num_orden INT IDENTITY(1,1),
+	fecha_pedido DATETIME,
+	fecha_entrega DATETIME,
+	id_cliente INT,
+	id_empleado INT,
+	observaciones TEXT,
+	num_factura INT,
+	CONSTRAINT pk_ordenes_pedido PRIMARY KEY(num_orden),
+	CONSTRAINT fk_ordenes_clientes FOREIGN KEY(id_cliente)
+	REFERENCES Clientes(id_cliente),
+	CONSTRAINT fk_ordenes_empleados FOREIGN KEY(id_empleado)
+	REFERENCES Empleados(id_empleado),
+	CONSTRAINT fk_ordenes_facturas FOREIGN KEY(num_factura)
+	REFERENCES Facturas(num_factura)
+);
+
+CREATE TABLE Detalles_Orden_de_Pedido(
+	id_detalle_pedido INT IDENTITY(1,1),
+	id_producto INT,
+	cantidad_pedida BIGINT,
+	precio_unitario DECIMAL(10,2),
+	num_orden INT,
+	CONSTRAINT pk_detalles_orden_pedido PRIMARY KEY(id_detalle_pedido),
+	CONSTRAINT fk_detalles_orden_productos FOREIGN KEY(id_producto)
+	REFERENCES Productos(id_producto),
+	CONSTRAINT fk_detalles_orden_ordenes FOREIGN KEY(num_orden)
+	REFERENCES Ordenes_de_Pedido(num_orden)
+);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

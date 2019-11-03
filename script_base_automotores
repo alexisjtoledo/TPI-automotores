@@ -26,7 +26,7 @@ CREATE TABLE Tipos_de_Contacto(
 CREATE TABLE Contactos(
 	id_contacto INT IDENTITY(1,1),
 	id_persona INT,	
-	contacto VARCHAR(30),
+	contacto VARCHAR(50),
 	id_tipo_contacto INT,
 	CONSTRAINT pk_contactos PRIMARY KEY(id_contacto),
 	CONSTRAINT fk_contacto_tipo_contacto FOREIGN KEY(id_tipo_contacto)

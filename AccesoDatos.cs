@@ -101,7 +101,7 @@ namespace Automotores
             dt = new DataTable();
             this.conectar();
             this.comando.CommandText = consultaSQL;
-            this.dt.Load(comando.ExecuteReader());
+            dt.Load(comando.ExecuteReader());
             this.desconectar();
             return dt;
         }
@@ -151,11 +151,17 @@ namespace Automotores
             dt = new DataTable();
             this.conectar();
             this.comando.CommandText = "SELECT * FROM "+ nombreVista;
-            this.dt.Load(comando.ExecuteReader());
+            dt.Load(comando.ExecuteReader());
             this.desconectar();
             return dt;
         }
-
+        public void ejecutarPA(string nombreProcedure)
+        {
+            this.conectar();
+            this.comando.CommandText = "EXEC "+nombreProcedure;
+            this.comando.ExecuteNonQuery();
+            this.desconectar();
+        }
         public DataTable consultarTipoDato(string nTab, string nCol)
         {
             DataTable dt = new DataTable();
@@ -165,7 +171,7 @@ namespace Automotores
                 + nTab 
                 + "' AND COLUMN_NAME = '" 
                 + nCol + "'";
-            this.dt.Load(comando.ExecuteReader());
+            dt.Load(comando.ExecuteReader());
             this.desconectar();
             return dt;
         }

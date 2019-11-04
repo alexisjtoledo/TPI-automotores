@@ -47,7 +47,7 @@ namespace Automotores
             DataTable t = new DataTable();
             string tipoDato;
             t = aDatos.consultarTipoDato(nTab, nCol);
-            tipoDato = t.Columns[0].ColumnName;
+            tipoDato = t.Rows[0][0].ToString();
             return tipoDato;
         }
     }

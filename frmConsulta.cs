@@ -85,6 +85,7 @@ namespace Automotores
             aDatos.cargarDatagrid("SELECT * FROM " + nTab, dgvVisor);
             // Dejo la primer columna seleccionada por defecto
             cboColumna.SelectedIndex = 0;
+            Habilitar(false);
         }
 
         // Evento cuando selecciono otra columna

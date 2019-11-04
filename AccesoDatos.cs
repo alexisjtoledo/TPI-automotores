@@ -108,7 +108,7 @@ namespace Automotores
         public void insertDatos(string nombreTabla, string values)
         {
             this.conectar();
-            this.comando.CommandText = "INSERT INTO "+ nombreTabla + "VALUES("+ values +")";
+            this.comando.CommandText = "INSERT INTO " + nombreTabla + "VALUES(" + values + ")";
             this.comando.ExecuteNonQuery();
             this.desconectar();
         }
@@ -150,7 +150,7 @@ namespace Automotores
         {
             dt = new DataTable();
             this.conectar();
-            this.comando.CommandText = "SELECT * FROM "+ nombreVista;
+            this.comando.CommandText = "SELECT * FROM " + nombreVista;
             dt.Load(comando.ExecuteReader());
             this.desconectar();
             return dt;
@@ -158,7 +158,7 @@ namespace Automotores
         public void ejecutarPA(string nombreProcedure)
         {
             this.conectar();
-            this.comando.CommandText = "EXEC "+nombreProcedure;
+            this.comando.CommandText = "EXEC " + nombreProcedure;
             this.comando.ExecuteNonQuery();
             this.desconectar();
         }
@@ -167,9 +167,9 @@ namespace Automotores
             DataTable dt = new DataTable();
             this.conectar();
             this.comando.CommandType = CommandType.Text;
-            this.comando.CommandText = "SELECT DATA_TYPE FROM information_schema.columns WHERE TABLE_NAME = '" 
-                + nTab 
-                + "' AND COLUMN_NAME = '" 
+            this.comando.CommandText = "SELECT DATA_TYPE FROM information_schema.columns WHERE TABLE_NAME = '"
+                + nTab
+                + "' AND COLUMN_NAME = '"
                 + nCol + "'";
             dt.Load(comando.ExecuteReader());
             this.desconectar();

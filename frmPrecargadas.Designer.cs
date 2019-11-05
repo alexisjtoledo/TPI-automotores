@@ -160,16 +160,16 @@
             // dgRespuesta
             // 
             this.dgRespuesta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgRespuesta.Location = new System.Drawing.Point(12, 189);
+            this.dgRespuesta.Location = new System.Drawing.Point(12, 244);
             this.dgRespuesta.Name = "dgRespuesta";
             this.dgRespuesta.RowHeadersWidth = 51;
-            this.dgRespuesta.Size = new System.Drawing.Size(1241, 513);
+            this.dgRespuesta.Size = new System.Drawing.Size(1241, 459);
             this.dgRespuesta.TabIndex = 20;
             // 
             // lblTitulo
             // 
             this.lblTitulo.AutoSize = true;
-            this.lblTitulo.Location = new System.Drawing.Point(555, 70);
+            this.lblTitulo.Location = new System.Drawing.Point(555, 65);
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(120, 25);
             this.lblTitulo.TabIndex = 22;
@@ -186,10 +186,10 @@
             this.txtConsulta.Enabled = false;
             this.txtConsulta.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtConsulta.ForeColor = System.Drawing.Color.SteelBlue;
-            this.txtConsulta.Location = new System.Drawing.Point(11, 96);
+            this.txtConsulta.Location = new System.Drawing.Point(11, 93);
             this.txtConsulta.Name = "txtConsulta";
             this.txtConsulta.ReadOnly = true;
-            this.txtConsulta.Size = new System.Drawing.Size(1242, 87);
+            this.txtConsulta.Size = new System.Drawing.Size(1242, 145);
             this.txtConsulta.TabIndex = 23;
             this.txtConsulta.Text = "";
             // 

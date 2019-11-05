@@ -14,14 +14,13 @@ namespace Automotores
     {
         AccesoDatos aDatos = new AccesoDatos();
         public frmCargarBase()
-        {
+        {   
             InitializeComponent();
         }
 
         private void btnVolver_Click(object sender, EventArgs e)
         {
             this.Hide();
-            //Close();
         }
 
         private void btnDeleteBase_Click(object sender, EventArgs e)
@@ -38,6 +37,7 @@ namespace Automotores
             this.aDatos.ejecutarPA("cargar_datos");
             MessageBox.Show("Ejecucion con exito");
             btnCargarData.Enabled = false;
+            this.button1.Enabled = true;
         }
 
         private void btnCargarStructure_Click(object sender, EventArgs e)
@@ -45,6 +45,20 @@ namespace Automotores
             this.aDatos.ejecutarPA("cargar_estructura");
             MessageBox.Show("Ejecucion con exito");
             btnCargarStructure.Enabled = false;
+            btnCargarData.Enabled = true;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.aDatos.cargarVistas();
+            MessageBox.Show("Ejecucion con exito");
+            this.button1.Enabled = false;
+        }
+
+        private void frmCargarBase_Load(object sender, EventArgs e)
+        {
+            this.btnCargarData.Enabled = false;
+            this.button1.Enabled = false;
         }
     }
 }

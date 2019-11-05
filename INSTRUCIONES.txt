@@ -1,0 +1,6 @@
+1 - Ejecutar EjecucionPrincipal.sql
+2 - Abrimos el Programa
+3 - Vamos a menu "Opciones Base de Datos"
+4 - Click en "Crear Estructura"
+5 - Click en "Crear Datos"
+6 - Click en "Crear Vistas"

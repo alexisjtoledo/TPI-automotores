@@ -77,17 +77,11 @@
     <Compile Include="frmPrincipal.Designer.cs">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmProducto.cs">
+    <Compile Include="frmProductos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmProducto.Designer.cs">
-      <DependentUpon>frmProducto.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmProductos2.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmProductos2.Designer.cs">
-      <DependentUpon>frmProductos2.cs</DependentUpon>
+    <Compile Include="frmProductos.Designer.cs">
+      <DependentUpon>frmProductos.cs</DependentUpon>
     </Compile>
     <Compile Include="MetodosGlobales.cs" />
     <Compile Include="Program.cs" />
@@ -107,11 +101,8 @@
     <EmbeddedResource Include="frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmProducto.resx">
-      <DependentUpon>frmProducto.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmProductos2.resx">
-      <DependentUpon>frmProductos2.cs</DependentUpon>
+    <EmbeddedResource Include="frmProductos.resx">
+      <DependentUpon>frmProductos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

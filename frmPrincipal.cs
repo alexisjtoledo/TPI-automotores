@@ -48,5 +48,11 @@ namespace Automotores
             frmCargarBase fcb = new frmCargarBase();
             fcb.ShowDialog();
         }
+
+        private void btnProductos_Click(object sender, EventArgs e)
+        {
+            frmProductos fps = new frmProductos();
+            fps.ShowDialog();
+        }
     }
 }

@@ -28,11 +28,11 @@ namespace Automotores
 
         private void FrmPrincipal_Load(object sender, EventArgs e)
         {
-            this.btnProductos.Enabled = false;
-            this.btnClientes.Enabled = false;
-            this.btnVendedores.Enabled = false;
-            this.button5.Enabled = true;
-            this.btnReportes.Enabled = false;
+            //this.btnProductos.Enabled = true;
+            //this.btnClientes.Enabled = true;
+            //this.btnVendedores.Enabled = true;
+            //this.button5.Enabled = true;
+            //this.btnReportes.Enabled = false;
         }
 
         private void btnSalir_Click(object sender, EventArgs e)

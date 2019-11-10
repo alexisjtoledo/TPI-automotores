@@ -159,10 +159,10 @@ namespace Automotores
 
         private void FrmPrecargadas_FormClosing(object sender, FormClosingEventArgs e)
         {
-            e.Cancel = true;
-            frmConsultas menu = new frmConsultas();
-            menu.Show();
-            this.Hide();
+            if (MessageBox.Show("¿Estás seguro de que quieres salir?", "Saliendo...", MessageBoxButtons.YesNo) == DialogResult.No)
+            {
+                e.Cancel = true;
+            }
         }
     }
 }

@@ -24,6 +24,15 @@ namespace Automotores
 
         private void BtnIngresar_Click(object sender, EventArgs e)
         {
+            this.login();
+        }
+
+        private void TxtContrasena_Enter(object sender, EventArgs e)
+        {
+        }
+
+        private void login()
+        {
             if (txtUsuario.Text == "admin" && txtContrasena.Text == "admin")
             {
                 frmPrincipal form = new frmPrincipal();
@@ -44,6 +53,15 @@ namespace Automotores
             {
                 MessageBox.Show("Ingrese su usuario y su contraseña.");
                 txtUsuario.Focus();
+            }
+
+        }
+
+        private void TxtContrasena_KeyDown(object sender, KeyEventArgs e)
+        {
+            if ((int)e.KeyData == (int)Keys.Enter)
+            {
+                this.login();
             }
         }
     }

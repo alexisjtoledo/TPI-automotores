@@ -53,6 +53,8 @@
             this.txtContrasena.Size = new System.Drawing.Size(140, 33);
             this.txtContrasena.TabIndex = 1;
             this.txtContrasena.UseSystemPasswordChar = true;
+            this.txtContrasena.Enter += new System.EventHandler(this.TxtContrasena_Enter);
+            this.txtContrasena.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtContrasena_KeyDown);
             // 
             // btnIngresar
             // 

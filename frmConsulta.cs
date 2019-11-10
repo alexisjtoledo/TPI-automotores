@@ -35,7 +35,7 @@ namespace Automotores
         bool bet = false;
         bool cont = false;
 
-        
+
         public frmConsulta()
         {
             InitializeComponent();
@@ -70,7 +70,7 @@ namespace Automotores
 
         private void CboTabla_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+
         }
 
         // Evento cuando selecciono otra tabla
@@ -85,6 +85,7 @@ namespace Automotores
             aDatos.cargarDatagrid("SELECT * FROM " + nTab, dgvVisor);
             // Dejo la primer columna seleccionada por defecto
             cboColumna.SelectedIndex = 0;
+            Habilitar(false);
         }
 
         // Evento cuando selecciono otra columna
@@ -170,17 +171,16 @@ namespace Automotores
         // FILTRO LIKE
         private void TxtContiene_TextChanged(object sender, EventArgs e)
         {
-                this.query = "SELECT * FROM " +
-                          nTab +
-                          " WHERE " + nCol +
-                          " LIKE '%" + txtContiene.Text + "%'";
+            this.query = "SELECT * FROM " +
+                      nTab +
+                      " WHERE " + nCol +
+                      " LIKE '%" + txtContiene.Text + "%'";
             this.comp = false;
             this.bet = false;
             this.cont = true;
         }
 
         // FILTROS COMPARADORES
-
         private void crearQueryComparador()
         {
             nTab = cboTabla.GetItemText(this.cboTabla.SelectedValue);
@@ -231,8 +231,8 @@ namespace Automotores
             this.desde = String.Format("{0:MM/dd/yyyy}", dtpInicio.Value);
             this.query = "SELECT * FROM " +
                             nTab +
-                            " WHERE " + nCol + 
-                            " BETWEEN '" + this.desde + 
+                            " WHERE " + nCol +
+                            " BETWEEN '" + this.desde +
                             "' AND '" + this.hasta + "'";
             this.comp = false;
             this.bet = true;
@@ -318,7 +318,5 @@ namespace Automotores
             }
             return false;
         }
-
-
     }
 }

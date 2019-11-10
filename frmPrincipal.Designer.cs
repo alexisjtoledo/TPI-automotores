@@ -39,13 +39,15 @@
             // 
             // btnProductos
             // 
+            this.btnProductos.BackColor = System.Drawing.Color.Transparent;
             this.btnProductos.Location = new System.Drawing.Point(12, 12);
             this.btnProductos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnProductos.Name = "btnProductos";
             this.btnProductos.Size = new System.Drawing.Size(267, 114);
             this.btnProductos.TabIndex = 0;
             this.btnProductos.Text = "Productos";
-            this.btnProductos.UseVisualStyleBackColor = true;
+            this.btnProductos.UseVisualStyleBackColor = false;
+            this.btnProductos.Click += new System.EventHandler(this.btnProductos_Click);
             // 
             // btnConsultas
             // 
@@ -102,10 +104,10 @@
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(552, 279);
+            this.btnSalir.Location = new System.Drawing.Point(552, 282);
             this.btnSalir.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(252, 114);
+            this.btnSalir.Size = new System.Drawing.Size(252, 77);
             this.btnSalir.TabIndex = 6;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
@@ -115,7 +117,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(816, 404);
+            this.ClientSize = new System.Drawing.Size(816, 367);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.btnVendedores);

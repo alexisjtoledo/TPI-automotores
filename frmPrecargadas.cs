@@ -62,50 +62,50 @@ namespace Automotores
         // Eventos On Hover
         private void BtnConsulta1_MouseHover(object sender, EventArgs e)
         {
-            txtConsulta.Text = "CONSULTA 1: \nSumatoria que vendió cada empleado este año, pero solo aquellos empleados que no tengan como cargo\nGerente ni Distribuidor";
+            txtConsulta.Text = "CONSULTA 1: \nSumatoria total que vendió cada empleado este año, pero solo aquellos empleados que no tengan\n como cargo Gerente ni Distribuidor.";
             txtConsulta.SelectAll();
             txtConsulta.SelectionAlignment = HorizontalAlignment.Center;
 
         }
         private void BtnConsulta2_MouseHover(object sender, EventArgs e)
         {
-            txtConsulta.Text = "CONSULTA 2: Texto consulta 2.";
+            txtConsulta.Text = "CONSULTA 2: \nVenta total que hizo cada empleado, pero solo aquellos que en donde el promedio total de sus ventas\n de este año supere al promedio de ventas del año pasado. Como condición, \nlos empleados deben tener más de 25 años.";
             txtConsulta.SelectAll();
             txtConsulta.SelectionAlignment = HorizontalAlignment.Center;
         }
         private void BtnConsulta3_MouseHover(object sender, EventArgs e)
         {
-            txtConsulta.Text = "CONSULTA 3: Texto consulta 3.";
+            txtConsulta.Text = "CONSULTA 3: \nEmitir un listado de los productos que no fueron vendidos este año. \nEn ese listado solo incluir aquellos cuyo precio del artículo oscile entre 10000 y 50000.";
             txtConsulta.SelectAll();
             txtConsulta.SelectionAlignment = HorizontalAlignment.Center;
         }
         private void BtnConsulta4_MouseHover(object sender, EventArgs e)
         {
-            txtConsulta.Text = "CONSULTA 4: Texto consulta 4.";
+            txtConsulta.Text = "CONSULTA 4: \nListe los datos de las facturas que solo se efectuaron en mayo y en donde el cliente sea mujer.";
             txtConsulta.SelectAll();
             txtConsulta.SelectionAlignment = HorizontalAlignment.Center;
         }
         private void BtnConsulta5_MouseHover(object sender, EventArgs e)
         {
-            txtConsulta.Text = "CONSULTA 5: Texto consulta 5.";
+            txtConsulta.Text = "CONSULTA 5: \nCantidad de autos vendidos por marca y por mes de los últimos 2 años.";
             txtConsulta.SelectAll();
             txtConsulta.SelectionAlignment = HorizontalAlignment.Center;
         }
         private void BtnConsulta6_MouseHover(object sender, EventArgs e)
         {
-            txtConsulta.Text = "CONSULTA 6: Texto consulta 6.";
+            txtConsulta.Text = "CONSULTA 6: \nLista de los empleados que en los últimos seis meses vendieron \nun monto total menor al promedio del acumulado en esos 6 meses.";
             txtConsulta.SelectAll();
             txtConsulta.SelectionAlignment = HorizontalAlignment.Center;
         }
         private void BtnConsulta7_MouseHover(object sender, EventArgs e)
         {
-            txtConsulta.Text = "CONSULTA 7: Texto consulta 7.";
+            txtConsulta.Text = "CONSULTA 7: \nModelos de automoviles que no fueron vendidos entre los años 2015 y 2017. \nLuego ordenar por codigo en forma descendiente y modelo de forma ascendente.";
             txtConsulta.SelectAll();
             txtConsulta.SelectionAlignment = HorizontalAlignment.Center;
         }
         private void BtnConsulta8_MouseHover(object sender, EventArgs e)
         {
-            txtConsulta.Text = "CONSULTA 8: Texto consulta 8.";
+            txtConsulta.Text = "CONSULTA 8: \nListar todos empleados con sus Totales de facturación mensual(2019) y Promedios de facturación mensual(2019), de solo aquellos en donde su promedio de facturacion sea menor al del año pasado y que todos aquellos empleados tengan cargo de vendedor y que tengan más de un año de antiguedad en la empresa.";
             txtConsulta.SelectAll();
             txtConsulta.SelectionAlignment = HorizontalAlignment.Center;
         }

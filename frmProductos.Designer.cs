@@ -53,45 +53,51 @@
             // dgProductos
             // 
             this.dgProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgProductos.Location = new System.Drawing.Point(37, 148);
+            this.dgProductos.Location = new System.Drawing.Point(28, 120);
+            this.dgProductos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgProductos.Name = "dgProductos";
             this.dgProductos.RowHeadersWidth = 51;
             this.dgProductos.RowTemplate.Height = 24;
-            this.dgProductos.Size = new System.Drawing.Size(1047, 369);
+            this.dgProductos.Size = new System.Drawing.Size(785, 300);
             this.dgProductos.TabIndex = 0;
             // 
             // btnNuevo
             // 
-            this.btnNuevo.Location = new System.Drawing.Point(37, 541);
+            this.btnNuevo.Location = new System.Drawing.Point(28, 440);
+            this.btnNuevo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(254, 71);
+            this.btnNuevo.Size = new System.Drawing.Size(190, 58);
             this.btnNuevo.TabIndex = 1;
             this.btnNuevo.Text = "Nuevo";
             this.btnNuevo.UseVisualStyleBackColor = true;
+            this.btnNuevo.Click += new System.EventHandler(this.BtnNuevo_Click);
             // 
             // btnActualizar
             // 
-            this.btnActualizar.Location = new System.Drawing.Point(308, 541);
+            this.btnActualizar.Location = new System.Drawing.Point(231, 440);
+            this.btnActualizar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnActualizar.Name = "btnActualizar";
-            this.btnActualizar.Size = new System.Drawing.Size(275, 71);
+            this.btnActualizar.Size = new System.Drawing.Size(206, 58);
             this.btnActualizar.TabIndex = 3;
             this.btnActualizar.Text = "Actualizar";
             this.btnActualizar.UseVisualStyleBackColor = true;
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(606, 541);
+            this.btnEliminar.Location = new System.Drawing.Point(454, 440);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(222, 71);
+            this.btnEliminar.Size = new System.Drawing.Size(166, 58);
             this.btnEliminar.TabIndex = 4;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
             // 
             // btnVolver
             // 
-            this.btnVolver.Location = new System.Drawing.Point(854, 541);
+            this.btnVolver.Location = new System.Drawing.Point(640, 440);
+            this.btnVolver.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnVolver.Name = "btnVolver";
-            this.btnVolver.Size = new System.Drawing.Size(230, 71);
+            this.btnVolver.Size = new System.Drawing.Size(172, 58);
             this.btnVolver.TabIndex = 5;
             this.btnVolver.Text = "Volver al Menu Principal";
             this.btnVolver.UseVisualStyleBackColor = true;
@@ -99,33 +105,37 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(34, 25);
+            this.label1.Location = new System.Drawing.Point(26, 20);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(66, 17);
+            this.label1.Size = new System.Drawing.Size(52, 13);
             this.label1.TabIndex = 6;
             this.label1.Text = "FILTROS";
             // 
             // txtFiltroNombre
             // 
-            this.txtFiltroNombre.Location = new System.Drawing.Point(144, 54);
+            this.txtFiltroNombre.Location = new System.Drawing.Point(108, 44);
+            this.txtFiltroNombre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtFiltroNombre.Name = "txtFiltroNombre";
-            this.txtFiltroNombre.Size = new System.Drawing.Size(147, 22);
+            this.txtFiltroNombre.Size = new System.Drawing.Size(111, 20);
             this.txtFiltroNombre.TabIndex = 7;
             // 
             // cboFiltroMarca
             // 
             this.cboFiltroMarca.FormattingEnabled = true;
-            this.cboFiltroMarca.Location = new System.Drawing.Point(377, 52);
+            this.cboFiltroMarca.Location = new System.Drawing.Point(283, 42);
+            this.cboFiltroMarca.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cboFiltroMarca.Name = "cboFiltroMarca";
-            this.cboFiltroMarca.Size = new System.Drawing.Size(121, 24);
+            this.cboFiltroMarca.Size = new System.Drawing.Size(92, 21);
             this.cboFiltroMarca.TabIndex = 8;
             // 
             // rbMayorQue
             // 
             this.rbMayorQue.AutoSize = true;
-            this.rbMayorQue.Location = new System.Drawing.Point(826, 50);
+            this.rbMayorQue.Location = new System.Drawing.Point(620, 41);
+            this.rbMayorQue.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.rbMayorQue.Name = "rbMayorQue";
-            this.rbMayorQue.Size = new System.Drawing.Size(96, 21);
+            this.rbMayorQue.Size = new System.Drawing.Size(75, 17);
             this.rbMayorQue.TabIndex = 9;
             this.rbMayorQue.TabStop = true;
             this.rbMayorQue.Text = "Mayor que";
@@ -134,77 +144,86 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(34, 59);
+            this.label2.Location = new System.Drawing.Point(26, 48);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(58, 17);
+            this.label2.Size = new System.Drawing.Size(44, 13);
             this.label2.TabIndex = 10;
             this.label2.Text = "Nombre";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(324, 57);
+            this.label3.Location = new System.Drawing.Point(243, 46);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(47, 17);
+            this.label3.Size = new System.Drawing.Size(37, 13);
             this.label3.TabIndex = 11;
             this.label3.Text = "Marca";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(34, 108);
+            this.label4.Location = new System.Drawing.Point(26, 88);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(97, 17);
+            this.label4.Size = new System.Drawing.Size(74, 13);
             this.label4.TabIndex = 12;
             this.label4.Text = "Tipo Producto";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(529, 54);
+            this.label5.Location = new System.Drawing.Point(397, 44);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(54, 17);
+            this.label5.Size = new System.Drawing.Size(42, 13);
             this.label5.TabIndex = 13;
             this.label5.Text = "Modelo";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(762, 75);
+            this.label6.Location = new System.Drawing.Point(572, 61);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(48, 17);
+            this.label6.Size = new System.Drawing.Size(37, 13);
             this.label6.TabIndex = 14;
             this.label6.Text = "Precio";
             // 
             // cboFiltroModelo
             // 
             this.cboFiltroModelo.FormattingEnabled = true;
-            this.cboFiltroModelo.Location = new System.Drawing.Point(606, 50);
+            this.cboFiltroModelo.Location = new System.Drawing.Point(454, 41);
+            this.cboFiltroModelo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cboFiltroModelo.Name = "cboFiltroModelo";
-            this.cboFiltroModelo.Size = new System.Drawing.Size(121, 24);
+            this.cboFiltroModelo.Size = new System.Drawing.Size(92, 21);
             this.cboFiltroModelo.TabIndex = 15;
             // 
             // cmbFiltroTipoProducto
             // 
             this.cmbFiltroTipoProducto.FormattingEnabled = true;
-            this.cmbFiltroTipoProducto.Location = new System.Drawing.Point(144, 105);
+            this.cmbFiltroTipoProducto.Location = new System.Drawing.Point(108, 85);
+            this.cmbFiltroTipoProducto.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cmbFiltroTipoProducto.Name = "cmbFiltroTipoProducto";
-            this.cmbFiltroTipoProducto.Size = new System.Drawing.Size(147, 24);
+            this.cmbFiltroTipoProducto.Size = new System.Drawing.Size(111, 21);
             this.cmbFiltroTipoProducto.TabIndex = 16;
             // 
             // txtFiltroPrecio
             // 
-            this.txtFiltroPrecio.Location = new System.Drawing.Point(942, 70);
+            this.txtFiltroPrecio.Location = new System.Drawing.Point(706, 57);
+            this.txtFiltroPrecio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtFiltroPrecio.Name = "txtFiltroPrecio";
-            this.txtFiltroPrecio.Size = new System.Drawing.Size(142, 22);
+            this.txtFiltroPrecio.Size = new System.Drawing.Size(108, 20);
             this.txtFiltroPrecio.TabIndex = 17;
             // 
             // rbMenorQue
             // 
             this.rbMenorQue.AutoSize = true;
-            this.rbMenorQue.Location = new System.Drawing.Point(826, 104);
+            this.rbMenorQue.Location = new System.Drawing.Point(620, 84);
+            this.rbMenorQue.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.rbMenorQue.Name = "rbMenorQue";
-            this.rbMenorQue.Size = new System.Drawing.Size(97, 21);
+            this.rbMenorQue.Size = new System.Drawing.Size(76, 17);
             this.rbMenorQue.TabIndex = 18;
             this.rbMenorQue.TabStop = true;
             this.rbMenorQue.Text = "Menor que";
@@ -213,9 +232,10 @@
             // rbIgualQue
             // 
             this.rbIgualQue.AutoSize = true;
-            this.rbIgualQue.Location = new System.Drawing.Point(826, 77);
+            this.rbIgualQue.Location = new System.Drawing.Point(620, 63);
+            this.rbIgualQue.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.rbIgualQue.Name = "rbIgualQue";
-            this.rbIgualQue.Size = new System.Drawing.Size(87, 21);
+            this.rbIgualQue.Size = new System.Drawing.Size(69, 17);
             this.rbIgualQue.TabIndex = 19;
             this.rbIgualQue.TabStop = true;
             this.rbIgualQue.Text = "Igual que";
@@ -223,9 +243,9 @@
             // 
             // frmProductos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1118, 624);
+            this.ClientSize = new System.Drawing.Size(838, 507);
             this.Controls.Add(this.rbIgualQue);
             this.Controls.Add(this.rbMenorQue);
             this.Controls.Add(this.txtFiltroPrecio);
@@ -245,6 +265,7 @@
             this.Controls.Add(this.btnActualizar);
             this.Controls.Add(this.btnNuevo);
             this.Controls.Add(this.dgProductos);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmProductos";
             this.Text = "Productos";
             ((System.ComponentModel.ISupportInitialize)(this.dgProductos)).EndInit();

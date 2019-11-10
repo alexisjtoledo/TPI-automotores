@@ -27,7 +27,6 @@ namespace Automotores
             if (this.tipoFormulario() == "Modificacion")
             {
                 aDatos.buscarProducto(pr_id);
-
                 while (aDatos.pDr.Read())
                 {
                     if (!aDatos.pDr.IsDBNull(0))
@@ -109,15 +108,35 @@ namespace Automotores
                                 + pr.pStockMin + ","
                                 + pr.pStockActual + ')';
 
-            aDatos.insertDatos("Productos", values);
-
+            aDatos.insertarProducto(values);
             MessageBox.Show(pr.toString() + " INGRESADO CORRECTAMENTE");
             this.cleanFields();
         }
 
         private void modificarProducto()
         {
+            Producto pr = new Producto();
 
+            pr.pNombre = txtNombreProd.Text;
+            pr.pPrecio = Convert.ToDouble(txtPrecio.Text);
+            pr.pTipo = Convert.ToInt32(cboTipoProd.SelectedValue);
+            pr.pColor = txtColor.Text;
+            pr.pDetalle = txtDetalles.Text;
+            pr.pModelo = Convert.ToInt32(cboModelo.SelectedValue);
+            pr.pStockMin = Convert.ToInt32(txtStockMin.Text);
+            pr.pStockActual = Convert.ToInt32(txtStockAct.Text);
+
+            string values = "nombre = '" + pr.pNombre + "'," +
+                            "precio = " + pr.pPrecio + "," +
+                            "id_tipo_producto = " + pr.pTipo + "," +
+                            "color = '"+ pr.pColor + "'," +
+                            "detalles = '" + pr.pDetalle + "'," +
+                            "id_modelo = " + pr.pModelo + "," +
+                            "stock_minimo = " + pr.pStockMin + "," +
+                            "stock = " + pr.pStockActual;
+
+            aDatos.modificarProducto(values, pr_id);
+            MessageBox.Show(pr.toString() + " ACTUALIZADO CORRECTAMENTE");
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
@@ -131,7 +150,8 @@ namespace Automotores
                 }
                 else
                 {
-                    //this.modificarProducto();
+                    this.modificarProducto();
+                    this.Close();
                 }
 
                 frmProductos prod = new frmProductos();
@@ -158,7 +178,7 @@ namespace Automotores
             {
                 try
                 {
-                    Int32.Parse(txtPrecio.Text);
+                    Convert.ToDecimal(txtPrecio.Text);
                 }
                 catch
                 {

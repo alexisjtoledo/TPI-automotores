@@ -89,13 +89,7 @@ namespace Automotores
             this.comando.CommandText = "SELECT * FROM " + nombreTabla;
             this.dr = comando.ExecuteReader();
         }
-        public void actualizar(string consultaSql)
-        {
-            this.conectar();
-            this.comando.CommandText = consultaSql;
-            this.comando.ExecuteNonQuery();
-            this.desconectar();
-        }
+
         public DataTable consultarBD(string consultaSQL)
         {
             dt = new DataTable();
@@ -113,10 +107,19 @@ namespace Automotores
             this.dr = comando.ExecuteReader();
         }
 
-        public void insertDatos(string nombreTabla, string values)
+        public void insertarProducto(string values)
         {
             this.conectar();
-            this.comando.CommandText = "INSERT INTO " + nombreTabla + " VALUES" + values;
+            this.comando.CommandText = "INSERT INTO Productos VALUES" + values;
+            this.comando.ExecuteNonQuery();
+            this.desconectar();
+        }
+
+        public void modificarProducto(string values, string id_producto)
+        {
+            this.desconectar();
+            this.conectar();
+            this.comando.CommandText = "UPDATE Productos SET "+ values + "WHERE id_producto =" + id_producto;
             this.comando.ExecuteNonQuery();
             this.desconectar();
         }

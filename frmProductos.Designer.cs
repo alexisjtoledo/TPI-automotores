@@ -54,17 +54,18 @@
             // 
             this.dgProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgProductos.Location = new System.Drawing.Point(28, 120);
-            this.dgProductos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgProductos.Margin = new System.Windows.Forms.Padding(2);
             this.dgProductos.Name = "dgProductos";
             this.dgProductos.RowHeadersWidth = 51;
             this.dgProductos.RowTemplate.Height = 24;
             this.dgProductos.Size = new System.Drawing.Size(785, 300);
             this.dgProductos.TabIndex = 0;
+            this.dgProductos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgProductos_CellContentClick);
             // 
             // btnNuevo
             // 
             this.btnNuevo.Location = new System.Drawing.Point(28, 440);
-            this.btnNuevo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnNuevo.Margin = new System.Windows.Forms.Padding(2);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(190, 58);
             this.btnNuevo.TabIndex = 1;
@@ -75,7 +76,7 @@
             // btnActualizar
             // 
             this.btnActualizar.Location = new System.Drawing.Point(231, 440);
-            this.btnActualizar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnActualizar.Margin = new System.Windows.Forms.Padding(2);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(206, 58);
             this.btnActualizar.TabIndex = 3;
@@ -85,7 +86,7 @@
             // btnEliminar
             // 
             this.btnEliminar.Location = new System.Drawing.Point(454, 440);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(2);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(166, 58);
             this.btnEliminar.TabIndex = 4;
@@ -95,7 +96,7 @@
             // btnVolver
             // 
             this.btnVolver.Location = new System.Drawing.Point(640, 440);
-            this.btnVolver.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnVolver.Margin = new System.Windows.Forms.Padding(2);
             this.btnVolver.Name = "btnVolver";
             this.btnVolver.Size = new System.Drawing.Size(172, 58);
             this.btnVolver.TabIndex = 5;
@@ -115,7 +116,7 @@
             // txtFiltroNombre
             // 
             this.txtFiltroNombre.Location = new System.Drawing.Point(108, 44);
-            this.txtFiltroNombre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtFiltroNombre.Margin = new System.Windows.Forms.Padding(2);
             this.txtFiltroNombre.Name = "txtFiltroNombre";
             this.txtFiltroNombre.Size = new System.Drawing.Size(111, 20);
             this.txtFiltroNombre.TabIndex = 7;
@@ -124,7 +125,7 @@
             // 
             this.cboFiltroMarca.FormattingEnabled = true;
             this.cboFiltroMarca.Location = new System.Drawing.Point(283, 42);
-            this.cboFiltroMarca.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cboFiltroMarca.Margin = new System.Windows.Forms.Padding(2);
             this.cboFiltroMarca.Name = "cboFiltroMarca";
             this.cboFiltroMarca.Size = new System.Drawing.Size(92, 21);
             this.cboFiltroMarca.TabIndex = 8;
@@ -133,7 +134,7 @@
             // 
             this.rbMayorQue.AutoSize = true;
             this.rbMayorQue.Location = new System.Drawing.Point(620, 41);
-            this.rbMayorQue.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbMayorQue.Margin = new System.Windows.Forms.Padding(2);
             this.rbMayorQue.Name = "rbMayorQue";
             this.rbMayorQue.Size = new System.Drawing.Size(75, 17);
             this.rbMayorQue.TabIndex = 9;
@@ -195,7 +196,7 @@
             // 
             this.cboFiltroModelo.FormattingEnabled = true;
             this.cboFiltroModelo.Location = new System.Drawing.Point(454, 41);
-            this.cboFiltroModelo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cboFiltroModelo.Margin = new System.Windows.Forms.Padding(2);
             this.cboFiltroModelo.Name = "cboFiltroModelo";
             this.cboFiltroModelo.Size = new System.Drawing.Size(92, 21);
             this.cboFiltroModelo.TabIndex = 15;
@@ -204,7 +205,7 @@
             // 
             this.cmbFiltroTipoProducto.FormattingEnabled = true;
             this.cmbFiltroTipoProducto.Location = new System.Drawing.Point(108, 85);
-            this.cmbFiltroTipoProducto.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbFiltroTipoProducto.Margin = new System.Windows.Forms.Padding(2);
             this.cmbFiltroTipoProducto.Name = "cmbFiltroTipoProducto";
             this.cmbFiltroTipoProducto.Size = new System.Drawing.Size(111, 21);
             this.cmbFiltroTipoProducto.TabIndex = 16;
@@ -212,7 +213,7 @@
             // txtFiltroPrecio
             // 
             this.txtFiltroPrecio.Location = new System.Drawing.Point(706, 57);
-            this.txtFiltroPrecio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtFiltroPrecio.Margin = new System.Windows.Forms.Padding(2);
             this.txtFiltroPrecio.Name = "txtFiltroPrecio";
             this.txtFiltroPrecio.Size = new System.Drawing.Size(108, 20);
             this.txtFiltroPrecio.TabIndex = 17;
@@ -221,7 +222,7 @@
             // 
             this.rbMenorQue.AutoSize = true;
             this.rbMenorQue.Location = new System.Drawing.Point(620, 84);
-            this.rbMenorQue.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbMenorQue.Margin = new System.Windows.Forms.Padding(2);
             this.rbMenorQue.Name = "rbMenorQue";
             this.rbMenorQue.Size = new System.Drawing.Size(76, 17);
             this.rbMenorQue.TabIndex = 18;
@@ -233,7 +234,7 @@
             // 
             this.rbIgualQue.AutoSize = true;
             this.rbIgualQue.Location = new System.Drawing.Point(620, 63);
-            this.rbIgualQue.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbIgualQue.Margin = new System.Windows.Forms.Padding(2);
             this.rbIgualQue.Name = "rbIgualQue";
             this.rbIgualQue.Size = new System.Drawing.Size(69, 17);
             this.rbIgualQue.TabIndex = 19;
@@ -265,9 +266,10 @@
             this.Controls.Add(this.btnActualizar);
             this.Controls.Add(this.btnNuevo);
             this.Controls.Add(this.dgProductos);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmProductos";
             this.Text = "Productos";
+            this.Load += new System.EventHandler(this.FrmProductos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgProductos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

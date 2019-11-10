@@ -48,6 +48,8 @@
             this.txtFiltroPrecio = new System.Windows.Forms.TextBox();
             this.rbMenorQue = new System.Windows.Forms.RadioButton();
             this.rbIgualQue = new System.Windows.Forms.RadioButton();
+            this.btnLimpiar = new System.Windows.Forms.Button();
+            this.btnFiltrar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgProductos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -63,7 +65,7 @@
             this.dgProductos.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedHeaders;
             this.dgProductos.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dgProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgProductos.Location = new System.Drawing.Point(40, 120);
+            this.dgProductos.Location = new System.Drawing.Point(40, 107);
             this.dgProductos.MultiSelect = false;
             this.dgProductos.Name = "dgProductos";
             this.dgProductos.ReadOnly = true;
@@ -71,7 +73,7 @@
             this.dgProductos.RowTemplate.Height = 24;
             this.dgProductos.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgProductos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgProductos.Size = new System.Drawing.Size(1109, 531);
+            this.dgProductos.Size = new System.Drawing.Size(1109, 544);
             this.dgProductos.TabIndex = 0;
             this.dgProductos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgProductos_CellContentClick);
             // 
@@ -151,36 +153,37 @@
             // 
             // txtFiltroNombre
             // 
-            this.txtFiltroNombre.Location = new System.Drawing.Point(109, 72);
+            this.txtFiltroNombre.Location = new System.Drawing.Point(218, 29);
             this.txtFiltroNombre.Name = "txtFiltroNombre";
-            this.txtFiltroNombre.Size = new System.Drawing.Size(150, 29);
+            this.txtFiltroNombre.Size = new System.Drawing.Size(170, 29);
             this.txtFiltroNombre.TabIndex = 0;
             // 
             // cboFiltroMarca
             // 
             this.cboFiltroMarca.FormattingEnabled = true;
-            this.cboFiltroMarca.Location = new System.Drawing.Point(318, 72);
+            this.cboFiltroMarca.Location = new System.Drawing.Point(687, 29);
             this.cboFiltroMarca.Name = "cboFiltroMarca";
-            this.cboFiltroMarca.Size = new System.Drawing.Size(150, 29);
+            this.cboFiltroMarca.Size = new System.Drawing.Size(170, 29);
             this.cboFiltroMarca.TabIndex = 1;
             // 
             // rbMayorQue
             // 
             this.rbMayorQue.AutoSize = true;
             this.rbMayorQue.BackColor = System.Drawing.Color.Transparent;
-            this.rbMayorQue.Location = new System.Drawing.Point(1100, 42);
+            this.rbMayorQue.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbMayorQue.Location = new System.Drawing.Point(422, 68);
             this.rbMayorQue.Name = "rbMayorQue";
-            this.rbMayorQue.Size = new System.Drawing.Size(39, 25);
+            this.rbMayorQue.Size = new System.Drawing.Size(85, 21);
             this.rbMayorQue.TabIndex = 9;
             this.rbMayorQue.TabStop = true;
-            this.rbMayorQue.Text = ">";
+            this.rbMayorQue.Text = "mayor que";
             this.rbMayorQue.UseVisualStyleBackColor = false;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Location = new System.Drawing.Point(36, 76);
+            this.label2.Location = new System.Drawing.Point(145, 33);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(71, 21);
             this.label2.TabIndex = 10;
@@ -190,7 +193,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Location = new System.Drawing.Point(261, 76);
+            this.label3.Location = new System.Drawing.Point(630, 33);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(56, 21);
             this.label3.TabIndex = 11;
@@ -200,7 +203,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Location = new System.Drawing.Point(690, 76);
+            this.label4.Location = new System.Drawing.Point(859, 34);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(110, 21);
             this.label4.TabIndex = 12;
@@ -210,7 +213,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Location = new System.Drawing.Point(470, 76);
+            this.label5.Location = new System.Drawing.Point(390, 33);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(66, 21);
             this.label5.TabIndex = 13;
@@ -220,7 +223,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Location = new System.Drawing.Point(953, 77);
+            this.label6.Location = new System.Drawing.Point(145, 68);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(56, 21);
             this.label6.TabIndex = 14;
@@ -229,22 +232,22 @@
             // cboFiltroModelo
             // 
             this.cboFiltroModelo.FormattingEnabled = true;
-            this.cboFiltroModelo.Location = new System.Drawing.Point(538, 72);
+            this.cboFiltroModelo.Location = new System.Drawing.Point(458, 29);
             this.cboFiltroModelo.Name = "cboFiltroModelo";
-            this.cboFiltroModelo.Size = new System.Drawing.Size(150, 29);
+            this.cboFiltroModelo.Size = new System.Drawing.Size(170, 29);
             this.cboFiltroModelo.TabIndex = 2;
             // 
             // cmbFiltroTipoProducto
             // 
             this.cmbFiltroTipoProducto.FormattingEnabled = true;
-            this.cmbFiltroTipoProducto.Location = new System.Drawing.Point(801, 72);
+            this.cmbFiltroTipoProducto.Location = new System.Drawing.Point(970, 30);
             this.cmbFiltroTipoProducto.Name = "cmbFiltroTipoProducto";
-            this.cmbFiltroTipoProducto.Size = new System.Drawing.Size(150, 29);
+            this.cmbFiltroTipoProducto.Size = new System.Drawing.Size(170, 29);
             this.cmbFiltroTipoProducto.TabIndex = 3;
             // 
             // txtFiltroPrecio
             // 
-            this.txtFiltroPrecio.Location = new System.Drawing.Point(1015, 73);
+            this.txtFiltroPrecio.Location = new System.Drawing.Point(527, 64);
             this.txtFiltroPrecio.Name = "txtFiltroPrecio";
             this.txtFiltroPrecio.Size = new System.Drawing.Size(119, 29);
             this.txtFiltroPrecio.TabIndex = 5;
@@ -253,25 +256,54 @@
             // 
             this.rbMenorQue.AutoSize = true;
             this.rbMenorQue.BackColor = System.Drawing.Color.Transparent;
-            this.rbMenorQue.Location = new System.Drawing.Point(1018, 42);
+            this.rbMenorQue.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbMenorQue.Location = new System.Drawing.Point(218, 68);
             this.rbMenorQue.Name = "rbMenorQue";
-            this.rbMenorQue.Size = new System.Drawing.Size(39, 25);
+            this.rbMenorQue.Size = new System.Drawing.Size(85, 21);
             this.rbMenorQue.TabIndex = 4;
             this.rbMenorQue.TabStop = true;
-            this.rbMenorQue.Text = "<";
+            this.rbMenorQue.Text = "menor que";
             this.rbMenorQue.UseVisualStyleBackColor = false;
             // 
             // rbIgualQue
             // 
             this.rbIgualQue.AutoSize = true;
             this.rbIgualQue.BackColor = System.Drawing.Color.Transparent;
-            this.rbIgualQue.Location = new System.Drawing.Point(1059, 42);
+            this.rbIgualQue.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbIgualQue.Location = new System.Drawing.Point(324, 68);
             this.rbIgualQue.Name = "rbIgualQue";
-            this.rbIgualQue.Size = new System.Drawing.Size(39, 25);
+            this.rbIgualQue.Size = new System.Drawing.Size(77, 21);
             this.rbIgualQue.TabIndex = 19;
             this.rbIgualQue.TabStop = true;
-            this.rbIgualQue.Text = "=";
+            this.rbIgualQue.Text = "igual que";
             this.rbIgualQue.UseVisualStyleBackColor = false;
+            // 
+            // btnLimpiar
+            // 
+            this.btnLimpiar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLimpiar.Image = ((System.Drawing.Image)(resources.GetObject("btnLimpiar.Image")));
+            this.btnLimpiar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLimpiar.Location = new System.Drawing.Point(661, 67);
+            this.btnLimpiar.Name = "btnLimpiar";
+            this.btnLimpiar.Size = new System.Drawing.Size(75, 23);
+            this.btnLimpiar.TabIndex = 20;
+            this.btnLimpiar.Text = "Limpiar";
+            this.btnLimpiar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnLimpiar.UseVisualStyleBackColor = true;
+            // 
+            // btnFiltrar
+            // 
+            this.btnFiltrar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFiltrar.Image = ((System.Drawing.Image)(resources.GetObject("btnFiltrar.Image")));
+            this.btnFiltrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFiltrar.Location = new System.Drawing.Point(743, 67);
+            this.btnFiltrar.Name = "btnFiltrar";
+            this.btnFiltrar.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.btnFiltrar.Size = new System.Drawing.Size(75, 23);
+            this.btnFiltrar.TabIndex = 21;
+            this.btnFiltrar.Text = "Filtrar";
+            this.btnFiltrar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnFiltrar.UseVisualStyleBackColor = true;
             // 
             // frmProductos
             // 
@@ -280,6 +312,8 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(1184, 761);
+            this.Controls.Add(this.btnFiltrar);
+            this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.rbIgualQue);
             this.Controls.Add(this.rbMenorQue);
             this.Controls.Add(this.txtFiltroPrecio);
@@ -336,5 +370,7 @@
         private System.Windows.Forms.TextBox txtFiltroPrecio;
         private System.Windows.Forms.RadioButton rbMenorQue;
         private System.Windows.Forms.RadioButton rbIgualQue;
+        private System.Windows.Forms.Button btnLimpiar;
+        private System.Windows.Forms.Button btnFiltrar;
     }
 }

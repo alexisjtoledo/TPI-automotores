@@ -10,17 +10,24 @@ using System.Windows.Forms;
 
 namespace Automotores
 {
-    public partial class frmProductos : Form
+    public partial class frmAltaModificacion : Form
     {
-        public frmProductos()
+
+        MetodosGlobales m = new MetodosGlobales();
+
+
+        public frmAltaModificacion()
         {
             InitializeComponent();
         }
 
-        private void BtnNuevo_Click(object sender, EventArgs e)
+        private void FrmAltaModificacion_Load(object sender, EventArgs e)
         {
-            frmAltaModificacion formulario = new frmAltaModificacion();
-            formulario.Show();
+            m.CargarCombo("Tipos_de_Producto", cboTipoProd);
+            m.CargarCombo("Modelos", cboModelo);
+
+
+
         }
     }
 }

@@ -47,6 +47,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AccesoDatos.cs" />
+    <Compile Include="frmAltaModificacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAltaModificacion.Designer.cs">
+      <DependentUpon>frmAltaModificacion.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmCargarBase.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,6 +92,9 @@
     <Compile Include="MetodosGlobales.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmAltaModificacion.resx">
+      <DependentUpon>frmAltaModificacion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmCargarBase.resx">
       <DependentUpon>frmCargarBase.cs</DependentUpon>
     </EmbeddedResource>

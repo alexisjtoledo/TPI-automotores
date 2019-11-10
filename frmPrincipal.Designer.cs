@@ -28,106 +28,96 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrincipal));
             this.btnProductos = new System.Windows.Forms.Button();
-            this.btnConsultas = new System.Windows.Forms.Button();
             this.btnReportes = new System.Windows.Forms.Button();
-            this.btnClientes = new System.Windows.Forms.Button();
-            this.btnVendedores = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
-            this.btnSalir = new System.Windows.Forms.Button();
+            this.btnConsultas = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnProductos
             // 
+            this.btnProductos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnProductos.BackColor = System.Drawing.Color.Transparent;
-            this.btnProductos.Location = new System.Drawing.Point(12, 12);
-            this.btnProductos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnProductos.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProductos.Image = ((System.Drawing.Image)(resources.GetObject("btnProductos.Image")));
+            this.btnProductos.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnProductos.Location = new System.Drawing.Point(13, 458);
+            this.btnProductos.Margin = new System.Windows.Forms.Padding(4);
             this.btnProductos.Name = "btnProductos";
-            this.btnProductos.Size = new System.Drawing.Size(267, 114);
+            this.btnProductos.Padding = new System.Windows.Forms.Padding(0, 10, 0, 10);
+            this.btnProductos.Size = new System.Drawing.Size(240, 90);
             this.btnProductos.TabIndex = 0;
-            this.btnProductos.Text = "Productos";
+            this.btnProductos.Text = "PRODUCTOS";
+            this.btnProductos.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnProductos.UseVisualStyleBackColor = false;
             this.btnProductos.Click += new System.EventHandler(this.btnProductos_Click);
             // 
-            // btnConsultas
-            // 
-            this.btnConsultas.Location = new System.Drawing.Point(285, 12);
-            this.btnConsultas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnConsultas.Name = "btnConsultas";
-            this.btnConsultas.Size = new System.Drawing.Size(261, 114);
-            this.btnConsultas.TabIndex = 1;
-            this.btnConsultas.Text = "Consultas";
-            this.btnConsultas.UseVisualStyleBackColor = true;
-            this.btnConsultas.Click += new System.EventHandler(this.Consultas_Click);
-            // 
             // btnReportes
             // 
-            this.btnReportes.Location = new System.Drawing.Point(552, 12);
-            this.btnReportes.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnReportes.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnReportes.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReportes.Image = ((System.Drawing.Image)(resources.GetObject("btnReportes.Image")));
+            this.btnReportes.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnReportes.Location = new System.Drawing.Point(531, 458);
+            this.btnReportes.Margin = new System.Windows.Forms.Padding(4);
             this.btnReportes.Name = "btnReportes";
-            this.btnReportes.Size = new System.Drawing.Size(252, 114);
+            this.btnReportes.Padding = new System.Windows.Forms.Padding(0, 10, 0, 10);
+            this.btnReportes.Size = new System.Drawing.Size(240, 90);
             this.btnReportes.TabIndex = 2;
-            this.btnReportes.Text = "Reportes";
+            this.btnReportes.Text = "REPORTES";
+            this.btnReportes.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnReportes.UseVisualStyleBackColor = true;
-            // 
-            // btnClientes
-            // 
-            this.btnClientes.Location = new System.Drawing.Point(12, 146);
-            this.btnClientes.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnClientes.Name = "btnClientes";
-            this.btnClientes.Size = new System.Drawing.Size(267, 114);
-            this.btnClientes.TabIndex = 3;
-            this.btnClientes.Text = "Clientes";
-            this.btnClientes.UseVisualStyleBackColor = true;
-            // 
-            // btnVendedores
-            // 
-            this.btnVendedores.Location = new System.Drawing.Point(285, 146);
-            this.btnVendedores.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnVendedores.Name = "btnVendedores";
-            this.btnVendedores.Size = new System.Drawing.Size(261, 114);
-            this.btnVendedores.TabIndex = 4;
-            this.btnVendedores.Text = "Vendedores";
-            this.btnVendedores.UseVisualStyleBackColor = true;
             // 
             // button5
             // 
-            this.button5.Enabled = false;
-            this.button5.Location = new System.Drawing.Point(552, 146);
-            this.button5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
+            this.button5.Location = new System.Drawing.Point(711, 13);
+            this.button5.Margin = new System.Windows.Forms.Padding(4);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(252, 114);
-            this.button5.TabIndex = 5;
-            this.button5.Text = "Opciones Base de Datos";
+            this.button5.Size = new System.Drawing.Size(60, 60);
+            this.button5.TabIndex = 3;
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
-            // btnSalir
+            // btnConsultas
             // 
-            this.btnSalir.Location = new System.Drawing.Point(552, 282);
-            this.btnSalir.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(252, 77);
-            this.btnSalir.TabIndex = 6;
-            this.btnSalir.Text = "Salir";
-            this.btnSalir.UseVisualStyleBackColor = true;
-            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            this.btnConsultas.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnConsultas.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConsultas.Image = ((System.Drawing.Image)(resources.GetObject("btnConsultas.Image")));
+            this.btnConsultas.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnConsultas.Location = new System.Drawing.Point(272, 458);
+            this.btnConsultas.Name = "btnConsultas";
+            this.btnConsultas.Padding = new System.Windows.Forms.Padding(0, 10, 0, 10);
+            this.btnConsultas.Size = new System.Drawing.Size(240, 90);
+            this.btnConsultas.TabIndex = 1;
+            this.btnConsultas.Text = "CONSULTAS";
+            this.btnConsultas.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnConsultas.UseVisualStyleBackColor = true;
+            this.btnConsultas.Click += new System.EventHandler(this.BtnConsultas_Click);
             // 
             // frmPrincipal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(816, 367);
-            this.Controls.Add(this.btnSalir);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.btnVendedores);
-            this.Controls.Add(this.btnClientes);
-            this.Controls.Add(this.btnReportes);
+            this.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.ClientSize = new System.Drawing.Size(784, 561);
             this.Controls.Add(this.btnConsultas);
+            this.Controls.Add(this.button5);
+            this.Controls.Add(this.btnReportes);
             this.Controls.Add(this.btnProductos);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.DoubleBuffered = true;
+            this.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximizeBox = false;
             this.Name = "frmPrincipal";
-            this.Text = "Menu Principal";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Menú Principal";
             this.Load += new System.EventHandler(this.FrmPrincipal_Load);
             this.ResumeLayout(false);
 
@@ -136,12 +126,9 @@
         #endregion
 
         private System.Windows.Forms.Button btnProductos;
-        private System.Windows.Forms.Button btnConsultas;
         private System.Windows.Forms.Button btnReportes;
-        private System.Windows.Forms.Button btnClientes;
-        private System.Windows.Forms.Button btnVendedores;
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.Button btnConsultas;
     }
 }
 

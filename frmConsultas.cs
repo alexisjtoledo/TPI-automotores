@@ -25,21 +25,21 @@ namespace Automotores
         {
             frmConsulta fb = new frmConsulta();
             fb.Show();
-            this.Close();
+            this.Hide();
         }
 
         private void BtnVistasCargadas_Click(object sender, EventArgs e)
         {
             frmPrecargadas fp = new frmPrecargadas();
             fp.Show();
-            this.Close();
+            this.Hide();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             frmPrincipal princ = new frmPrincipal();
             princ.Show();
-            this.Close();
+            this.Hide();
         }
 
         private void frmConsultas_Load(object sender, EventArgs e)
@@ -50,9 +50,6 @@ namespace Automotores
         private void FrmConsultas_FormClosing(object sender, FormClosingEventArgs e)
         {
             e.Cancel = true;
-            frmPrincipal princ = new frmPrincipal();
-            princ.Show();
-            this.Close();
         }
     }
 }

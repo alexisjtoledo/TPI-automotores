@@ -321,10 +321,10 @@ namespace Automotores
 
         private void FrmConsulta_FormClosing(object sender, FormClosingEventArgs e)
         {
-            e.Cancel = true;
-            frmConsultas fcc = new frmConsultas();
-            fcc.Show();
-            this.Hide();
+            if (MessageBox.Show("¿Estás seguro de que quieres salir?", "Saliendo...", MessageBoxButtons.YesNo) == DialogResult.No)
+            {
+                e.Cancel = true;
+            }
         }
     }
 }

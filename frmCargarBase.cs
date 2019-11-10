@@ -73,9 +73,6 @@ namespace Automotores
         private void FrmCargarBase_FormClosing(object sender, FormClosingEventArgs e)
         {
             e.Cancel = true;
-            frmPrincipal form = new frmPrincipal();
-            form.Show();
-            this.Hide();
         }
     }
 }

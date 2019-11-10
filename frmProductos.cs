@@ -59,10 +59,10 @@ namespace Automotores
 
         private void FrmProductos_FormClosing(object sender, FormClosingEventArgs e)
         {
-            e.Cancel = true;
-            frmPrincipal principal = new frmPrincipal();
-            principal.Show();
-            this.Hide();
+            if (MessageBox.Show("¿Estás seguro de que quieres salir?", "Saliendo...", MessageBoxButtons.YesNo) == DialogResult.No)
+            {
+                e.Cancel = true;
+            }
         }
     }
 }

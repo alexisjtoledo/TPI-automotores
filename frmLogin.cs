@@ -29,21 +29,22 @@ namespace Automotores
                 frmPrincipal form = new frmPrincipal();
                 form.Show();
                 this.Hide();
-            } else if (txtUsuario.Text != "admin")
+            }
+            else if (txtUsuario.Text != "admin")
             {
                 MessageBox.Show("El usuario ingresado no es correcto.");
                 txtUsuario.Focus();
-            } else if (txtContrasena.Text != "admin")
+            }
+            else if (txtContrasena.Text != "admin")
             {
                 MessageBox.Show("La contraseña ingresada no es correcta.");
                 txtContrasena.Focus();
-            } else if (string.IsNullOrEmpty(txtUsuario.Text) || string.IsNullOrEmpty(txtContrasena.Text))
+            }
+            else if (string.IsNullOrEmpty(txtUsuario.Text) || string.IsNullOrEmpty(txtContrasena.Text))
             {
                 MessageBox.Show("Ingrese su usuario y su contraseña.");
                 txtUsuario.Focus();
             }
         }
-
-        
     }
 }

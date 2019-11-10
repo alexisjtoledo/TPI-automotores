@@ -28,14 +28,9 @@ namespace Automotores
 
         private void BtnNuevo_Click(object sender, EventArgs e)
         {
-
             frmAltaModificacion formulario = new frmAltaModificacion();
             formulario.Show();
-            
-
-
-
-
+            this.Hide();
         }
 
         private void DgProductos_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -43,6 +38,31 @@ namespace Automotores
 
         }
 
-        
+        private void BtnActualizar_Click(object sender, EventArgs e)
+        {
+            frmAltaModificacion formulario = new frmAltaModificacion();
+            formulario.Show();
+            this.Hide();
+        }
+
+        private void BtnEliminar_Click(object sender, EventArgs e)
+        {
+            // Messagebox!
+        }
+
+        private void BtnVolver_Click(object sender, EventArgs e)
+        {
+            frmPrincipal principal = new frmPrincipal();
+            principal.Show();
+            this.Hide();
+        }
+
+        private void FrmProductos_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            e.Cancel = true;
+            frmPrincipal principal = new frmPrincipal();
+            principal.Show();
+            this.Hide();
+        }
     }
 }

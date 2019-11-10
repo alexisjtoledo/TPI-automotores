@@ -110,7 +110,9 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmCargarBase";
             this.Text = "Cargas de Base";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmCargarBase_FormClosing);
             this.Load += new System.EventHandler(this.frmCargarBase_Load);
+            this.Shown += new System.EventHandler(this.FrmCargarBase_Shown);
             this.ResumeLayout(false);
 
         }

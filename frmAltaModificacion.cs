@@ -25,9 +25,25 @@ namespace Automotores
         {
             m.CargarCombo("Tipos_de_Producto", cboTipoProd);
             m.CargarCombo("Modelos", cboModelo);
+        }
 
+        private void BtnGuardar_Click(object sender, EventArgs e)
+        {
+            frmProductos prod = new frmProductos();
+            prod.Show();
+            this.Hide();
+        }
 
+        private void BtnCancelar_Click(object sender, EventArgs e)
+        {
+            frmProductos prod = new frmProductos();
+            prod.Show();
+            this.Hide();
+        }
 
+        private void FrmAltaModificacion_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            e.Cancel = true;
         }
     }
 }

@@ -55,7 +55,7 @@ namespace Automotores
         {
             DataGridViewRow row = dgProductos.Rows[this.indexRow];
             string id_producto = row.Cells[0].Value.ToString();
-            if (MessageBox.Show("¿Esta seguro de que quiere eliminar el producto selecionado?", "Eliminar", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            if (MessageBox.Show("¿Esta seguro de eliminar el producto selecionado?", "Eliminar", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 aDatos.borrarProducto(id_producto);
                 aDatos.cargarDatagrid("SELECT * FROM Vista_productos", this.dgProductos);

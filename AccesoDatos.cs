@@ -195,7 +195,11 @@ namespace Automotores
             this.comando.ExecuteNonQuery();
             this.comando.CommandText = "CREATE VIEW Vista_Consulta_8 AS SELECT MONTH(f.fecha_factura) AS 'Mes', p.nombre+' '+p.apellido AS 'Empleado', SUM(df.precio_unitario * df.cantidad) AS 'Total Factura', AVG(df.precio_unitario * df.cantidad) AS 'Promedio Facturado' FROM Facturas f JOIN Detalles_de_Factura df ON df.num_factura = f.num_factura JOIN Empleados e ON e.id_empleado = f.id_empleado JOIN Personas p ON p.id_persona = e.id_persona JOIN Cargos_de_Empleado ce ON e.id_cargo_empleado = ce.id_cargo_empleado WHERE ce.nombre = 'Vendedor' AND DATEDIFF(YEAR, e.fecha_insercion, GETDATE()) > 1 AND YEAR(f.fecha_factura) = '2019' GROUP BY MONTH(f.fecha_factura), p.nombre+' '+p.apellido HAVING AVG(df.precio_unitario * df.cantidad) < (SELECT AVG(df1.precio_unitario * df1.cantidad) FROM Detalles_de_Factura df1 JOIN Facturas f1 ON f1.num_factura = df1.num_factura WHERE YEAR(f1.fecha_factura) = YEAR(GETDATE()) - 1)";
             this.comando.ExecuteNonQuery();
+            this.comando.CommandText = "CREATE VIEW Vista_productos AS SELECT P.id_producto AS 'Cod.', P.nombre AS 'Nombre', TP.nombre AS 'Tipo', P.color AS 'Color', Ma.nombre AS 'Marca', M.nombre AS 'Modelo', P.stock_minimo AS 'Stock Mínimo', P.stock AS 'Stock Actual', P.detalles AS 'Detalles' FROM Productos P JOIN Tipos_de_Producto TP ON P.id_tipo_producto = TP.id_tipo_producto JOIN Modelos M ON P.id_modelo = M.id_modelo JOIN Marcas Ma ON M.id_marca = Ma.id_marca";
+            this.comando.ExecuteNonQuery();
             this.desconectar();
         }
     }
 }
+
+

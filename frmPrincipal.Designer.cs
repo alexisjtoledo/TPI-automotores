@@ -33,6 +33,7 @@
             this.btnReportes = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.btnConsultas = new System.Windows.Forms.Button();
+            this.btnLogOut = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnProductos
@@ -72,7 +73,7 @@
             // button5
             // 
             this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
-            this.button5.Location = new System.Drawing.Point(711, 13);
+            this.button5.Location = new System.Drawing.Point(645, 13);
             this.button5.Margin = new System.Windows.Forms.Padding(4);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(60, 60);
@@ -97,6 +98,16 @@
             this.btnConsultas.UseVisualStyleBackColor = true;
             this.btnConsultas.Click += new System.EventHandler(this.BtnConsultas_Click);
             // 
+            // btnLogOut
+            // 
+            this.btnLogOut.Image = ((System.Drawing.Image)(resources.GetObject("btnLogOut.Image")));
+            this.btnLogOut.Location = new System.Drawing.Point(712, 12);
+            this.btnLogOut.Name = "btnLogOut";
+            this.btnLogOut.Size = new System.Drawing.Size(60, 60);
+            this.btnLogOut.TabIndex = 4;
+            this.btnLogOut.UseVisualStyleBackColor = true;
+            this.btnLogOut.Click += new System.EventHandler(this.BtnLogOut_Click);
+            // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 25F);
@@ -105,6 +116,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(784, 561);
+            this.Controls.Add(this.btnLogOut);
             this.Controls.Add(this.btnConsultas);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.btnReportes);
@@ -118,6 +130,7 @@
             this.Name = "frmPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menú Principal";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmPrincipal_FormClosing);
             this.Load += new System.EventHandler(this.FrmPrincipal_Load);
             this.ResumeLayout(false);
 
@@ -129,6 +142,7 @@
         private System.Windows.Forms.Button btnReportes;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button btnConsultas;
+        private System.Windows.Forms.Button btnLogOut;
     }
 }
 

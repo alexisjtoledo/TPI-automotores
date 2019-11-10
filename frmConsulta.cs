@@ -163,9 +163,9 @@ namespace Automotores
 
         private void btnVolver_Click(object sender, EventArgs e)
         {
-            this.Hide();
             frmConsultas fcc = new frmConsultas();
-            fcc.ShowDialog();
+            fcc.Show();
+            this.Hide();
         }
 
         // FILTRO LIKE
@@ -317,6 +317,14 @@ namespace Automotores
                 return true;
             }
             return false;
+        }
+
+        private void FrmConsulta_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            e.Cancel = true;
+            frmConsultas fcc = new frmConsultas();
+            fcc.Show();
+            this.Hide();
         }
     }
 }

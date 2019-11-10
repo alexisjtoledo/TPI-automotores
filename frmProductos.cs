@@ -41,9 +41,9 @@ namespace Automotores
         {
             DataGridViewRow row = dgProductos.Rows[this.indexRow];
             string id_producto = row.Cells[0].Value.ToString();
-
             frmAltaModificacion fam = new frmAltaModificacion(id_producto);
-            fam.ShowDialog();
+            fam.Show();
+            this.Hide();
         }
 
         private void dgProductos_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -75,6 +75,11 @@ namespace Automotores
             {
                 e.Cancel = true;
             }
+        }
+
+        private void btnFiltrar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

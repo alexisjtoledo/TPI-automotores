@@ -151,7 +151,7 @@ namespace Automotores
                 else
                 {
                     this.modificarProducto();
-                    this.Close();
+                    //this.Close();
                 }
 
                 frmProductos prod = new frmProductos();

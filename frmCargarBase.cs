@@ -20,6 +20,8 @@ namespace Automotores
 
         private void btnVolver_Click(object sender, EventArgs e)
         {
+            frmPrincipal form = new frmPrincipal();
+            form.Show();
             this.Hide();
         }
 
@@ -57,8 +59,20 @@ namespace Automotores
 
         private void frmCargarBase_Load(object sender, EventArgs e)
         {
-            this.btnCargarData.Enabled = false;
-            this.button1.Enabled = false;
+            
+        }
+
+        private void FrmCargarBase_Shown(object sender, EventArgs e)
+        {
+            MessageBox.Show("Su base de datos ya se encuentra cargada correctamente.");
+            btnCargarStructure.Enabled = false;
+            btnCargarData.Enabled = false;
+            button1.Enabled = false;
+        }
+
+        private void FrmCargarBase_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            e.Cancel = true;
         }
     }
 }

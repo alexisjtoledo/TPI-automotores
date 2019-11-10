@@ -152,7 +152,7 @@
             this.btnCancelar.TabIndex = 10;
             this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCancelar.UseVisualStyleBackColor = true;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            this.btnCancelar.Click += new System.EventHandler(this.BtnCancelar_Click);
             // 
             // lblId
             // 
@@ -290,6 +290,7 @@
             this.Name = "frmAltaModificacion";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Producto";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmAltaModificacion_FormClosing);
             this.Load += new System.EventHandler(this.FrmAltaModificacion_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

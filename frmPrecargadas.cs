@@ -147,7 +147,22 @@ namespace Automotores
 
         private void btnVolver_Click(object sender, EventArgs e)
         {
-            Close();
+            frmConsultas menu = new frmConsultas();
+            menu.Show();
+            this.Hide();
+        }
+
+        private void FrmPrecargadas_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FrmPrecargadas_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (MessageBox.Show("¿Estás seguro de que quieres salir?", "Saliendo...", MessageBoxButtons.YesNo) == DialogResult.No)
+            {
+                e.Cancel = true;
+            }
         }
     }
 }

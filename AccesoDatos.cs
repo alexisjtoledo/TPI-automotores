@@ -44,7 +44,7 @@ namespace Automotores
         {
             dt = new DataTable();
             this.conectar();
-            this.comando.CommandText = "SELECT * FROM " + nombreTabla;
+            this.comando.CommandText = "SELECT * FROM " + nombreTabla + " ORDER BY 2 ASC";
             dt.Load(comando.ExecuteReader());
             this.desconectar();
             return dt;
@@ -66,7 +66,7 @@ namespace Automotores
             DataTable dt = new DataTable();
             this.conectar();
             this.comando.CommandType = CommandType.Text;
-            this.comando.CommandText = "SELECT TABLE_NAME, REPLACE(TABLE_NAME, '_', ' ') FROM INFORMATION_SCHEMA.TABLES";
+            this.comando.CommandText = "SELECT TABLE_NAME, REPLACE(TABLE_NAME, '_', ' ') FROM INFORMATION_SCHEMA.TABLES ORDER BY 2 ASC";
             dt.Load(comando.ExecuteReader());
             this.desconectar();
             return dt;
@@ -77,7 +77,7 @@ namespace Automotores
             DataTable dt = new DataTable();
             this.conectar();
             this.comando.CommandType = CommandType.Text;
-            this.comando.CommandText = "SELECT COLUMN_NAME, REPLACE(COLUMN_NAME, '_', ' ') FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = '" + nombreTabla + "'";
+            this.comando.CommandText = "SELECT COLUMN_NAME, REPLACE(COLUMN_NAME, '_', ' ') FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = '" + nombreTabla + "' ORDER BY 2 ASC";
             dt.Load(comando.ExecuteReader());
             this.desconectar();
             return dt;

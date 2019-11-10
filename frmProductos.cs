@@ -29,7 +29,8 @@ namespace Automotores
         private void BtnNuevo_Click(object sender, EventArgs e)
         {
             frmAltaModificacion formulario = new frmAltaModificacion();
-            formulario.ShowDialog();
+            formulario.Show();
+            this.Hide();
         }
 
         private void DgProductos_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -45,11 +46,6 @@ namespace Automotores
             fam.ShowDialog();
         }
 
-        private void btnVolver_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
         private void dgProductos_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             indexRow = e.RowIndex;
@@ -62,6 +58,21 @@ namespace Automotores
 
             aDatos.borrarProducto(id_producto);
             aDatos.cargarDatagrid("SELECT * FROM Vista_productos", this.dgProductos);
+        }
+
+        private void BtnVolver_Click(object sender, EventArgs e)
+        {
+            frmPrincipal principal = new frmPrincipal();
+            principal.Show();
+            this.Hide();
+        }
+
+        private void FrmProductos_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (MessageBox.Show("¿Estás seguro de que quieres salir?", "Saliendo...", MessageBoxButtons.YesNo) == DialogResult.No)
+            {
+                e.Cancel = true;
+            }
         }
     }
 }

@@ -24,9 +24,6 @@ namespace Automotores
 
         private void FrmAltaModificacion_Load(object sender, EventArgs e)
         {
-            m.CargarCombo("Tipos_de_Producto", cboTipoProd);
-            m.CargarCombo("Modelos", cboModelo);
-
             if (this.tipoFormulario() == "Modificacion")
             {
                 aDatos.buscarProducto(pr_id);
@@ -75,6 +72,9 @@ namespace Automotores
             {
                 this.cleanFields();
             }
+
+            m.CargarCombo("Tipos_de_Producto", cboTipoProd);
+            m.CargarCombo("Modelos", cboModelo);
         }
 
         private string tipoFormulario()
@@ -111,7 +111,7 @@ namespace Automotores
 
             aDatos.insertDatos("Productos", values);
 
-            MessageBox.Show(pr.toString() + "INGRESADO CORRECTAMENTE");
+            MessageBox.Show(pr.toString() + " INGRESADO CORRECTAMENTE");
             this.cleanFields();
         }
 
@@ -123,7 +123,7 @@ namespace Automotores
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             if (this.validateForm())
-            {   
+            {
                 // Valido si es un producto nuevo o un producto existente
                 if (this.tipoFormulario() == "Nuevo")
                 {
@@ -133,7 +133,11 @@ namespace Automotores
                 {
                     //this.modificarProducto();
                 }
-            }
+
+                frmProductos prod = new frmProductos();
+                prod.Show();
+                this.Hide();
+            }            
         }
 
         private bool validateForm()
@@ -206,11 +210,16 @@ namespace Automotores
             txtStockAct.Clear();
         }
 
-        private void btnCancelar_Click(object sender, EventArgs e)
+        private void BtnCancelar_Click(object sender, EventArgs e)
         {
-            //frmProductos fpr = new frmProductos();
-            //fpr.btnvo;
-            Close();
+            frmProductos prod = new frmProductos();
+            prod.Show();
+            this.Hide();
+        }
+
+        private void FrmAltaModificacion_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            e.Cancel = true;
         }
     }
 }

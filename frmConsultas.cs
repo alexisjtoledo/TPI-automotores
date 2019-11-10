@@ -24,25 +24,32 @@ namespace Automotores
         private void btnBuscador_Click(object sender, EventArgs e)
         {
             frmConsulta fb = new frmConsulta();
-            fb.ShowDialog();
-            this.Close();
+            fb.Show();
+            this.Hide();
         }
 
         private void BtnVistasCargadas_Click(object sender, EventArgs e)
         {
             frmPrecargadas fp = new frmPrecargadas();
-            fp.ShowDialog();
-            this.Close();
+            fp.Show();
+            this.Hide();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Close();
+            frmPrincipal princ = new frmPrincipal();
+            princ.Show();
+            this.Hide();
         }
 
         private void frmConsultas_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void FrmConsultas_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            e.Cancel = true;
         }
     }
 }

@@ -22,29 +22,43 @@ namespace Automotores
 
         private void FrmPrincipal_Load(object sender, EventArgs e)
         {
-            //this.btnProductos.Enabled = true;
-            //this.btnClientes.Enabled = true;
-            //this.btnVendedores.Enabled = true;
-            //this.button5.Enabled = true;
-            //this.btnReportes.Enabled = false;
+
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
             frmCargarBase fcb = new frmCargarBase();
-            fcb.ShowDialog();
+            fcb.Show();
+            this.Hide();
         }
 
         private void btnProductos_Click(object sender, EventArgs e)
         {
             frmProductos fps = new frmProductos();
-            fps.ShowDialog();
+            fps.Show();
+            this.Hide();
         }
 
         private void BtnConsultas_Click(object sender, EventArgs e)
         {
             frmConsultas fp = new frmConsultas();
-            fp.ShowDialog();
+            fp.Show();
+            this.Hide();
+        }
+
+        private void BtnLogOut_Click(object sender, EventArgs e)
+        {
+            frmLogin log = new frmLogin();
+            log.Show();
+            this.Hide();
+        }
+
+        private void FrmPrincipal_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (MessageBox.Show("¿Estás seguro de que quieres salir?", "Saliendo...", MessageBoxButtons.YesNo) == DialogResult.No)
+            {
+                e.Cancel = true;
+            }
         }
     }
 }

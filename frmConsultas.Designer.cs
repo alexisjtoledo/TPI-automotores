@@ -89,6 +89,7 @@
             this.Controls.Add(this.btnBuscador);
             this.Controls.Add(this.btnVistasCargadas);
             this.Controls.Add(this.button1);
+            this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -96,6 +97,7 @@
             this.Name = "frmConsultas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Consultas";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmConsultas_FormClosing);
             this.Load += new System.EventHandler(this.frmConsultas_Load);
             this.ResumeLayout(false);
 

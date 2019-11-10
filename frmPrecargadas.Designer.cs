@@ -242,6 +242,8 @@
             this.Name = "frmPrecargadas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Consultas Precargadas";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmPrecargadas_FormClosing);
+            this.Load += new System.EventHandler(this.FrmPrecargadas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgRespuesta)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

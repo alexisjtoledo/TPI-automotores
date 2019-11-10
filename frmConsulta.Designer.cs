@@ -232,15 +232,16 @@
             // 
             this.dgvVisor.AllowUserToAddRows = false;
             this.dgvVisor.AllowUserToDeleteRows = false;
-            this.dgvVisor.AllowUserToOrderColumns = true;
-            this.dgvVisor.AllowUserToResizeColumns = false;
             this.dgvVisor.AllowUserToResizeRows = false;
             this.dgvVisor.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvVisor.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dgvVisor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvVisor.Location = new System.Drawing.Point(264, 12);
+            this.dgvVisor.MultiSelect = false;
             this.dgvVisor.Name = "dgvVisor";
+            this.dgvVisor.ReadOnly = true;
             this.dgvVisor.RowHeadersWidth = 51;
+            this.dgvVisor.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvVisor.Size = new System.Drawing.Size(908, 775);
             this.dgvVisor.TabIndex = 20;
             // 
@@ -309,6 +310,7 @@
             this.Name = "frmConsulta";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Consultas";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmConsulta_FormClosing);
             this.Load += new System.EventHandler(this.FrmConsulta_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvVisor)).EndInit();
             this.ResumeLayout(false);

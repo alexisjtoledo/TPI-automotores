@@ -157,10 +157,10 @@
   </data>
   <data name="btnVolver.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAACZSURBVFhH7dUxCsJQFETR34i4IMHewqzAPQgWllZiZ2mXxdhYuS69wTz4vFZkXjEHLoRUQ0jy
-        m5mZ/d+Whu+l3p3ec/JR/ZipI8ncqB/zohVJXKjMmDP1Y54kG3OiPGZJEnnMg2RjNpTHLEhmTXmQ7OmE
-        Uu9PKDmq1GcfrtSPkv4YQ6mjI+TD9UByI8Wg/XSjgt2cmZn9rrUPoNZBJrMWvWcAAAAASUVORK5CYII=
+        iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAABGdBTUEAALGPC/xhBQAAAJlJREFUWEft
+        1TEKwlAURNHfiLggwd7CrMA9CBaWVmJnaZfF2Fi5Lr3BPPi8VmReMQcuhFRDSPKbmZn935aG76Xend5z
+        8lH9mKkjydyoH/OiFUlcqMyYM/VjniQbc6I8ZkkSecyDZGM2lMcsSGZNeZDs6YRS708oOarUZx+u1I+S
+        /hhDqaMj5MP1QHIjxaD9dKOC3ZyZmf2utQ+g1kEmsxa9ZwAAAABJRU5ErkJggg==
 </value>
   </data>
   <data name="label1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

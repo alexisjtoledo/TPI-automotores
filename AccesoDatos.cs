@@ -31,7 +31,7 @@ namespace Automotores
         }
         public void conectar()
         {
-            this.conexion.ConnectionString = @"Data Source=ALEXIS-PC;Initial Catalog=Automotores;Integrated Security=True";
+            this.conexion.ConnectionString = @"Data Source=DESKTOP-2UN2K3I\MYSQL17;Initial Catalog=Automotores;Integrated Security=True";
             this.conexion.Open();
             this.comando.Connection = conexion;
             this.comando.CommandType = CommandType.Text;
@@ -105,18 +105,26 @@ namespace Automotores
             this.desconectar();
             return dt;
         }
+
+        public void buscarProducto(string id_producto)
+        {
+            this.conectar();
+            this.comando.CommandText = "SELECT * FROM Productos WHERE id_producto = " + id_producto;
+            this.dr = comando.ExecuteReader();
+        }
+
         public void insertDatos(string nombreTabla, string values)
         {
             this.conectar();
-            this.comando.CommandText = "INSERT INTO " + nombreTabla + "VALUES(" + values + ")";
+            this.comando.CommandText = "INSERT INTO " + nombreTabla + " VALUES" + values;
             this.comando.ExecuteNonQuery();
             this.desconectar();
         }
 
-        public void deleteDatos(string nombreTabla, string condition)
+        public void borrarProducto(string id_producto)
         {
             this.conectar();
-            this.comando.CommandText = "DELETE FROM " + nombreTabla + "WHERE " + condition;
+            this.comando.CommandText = "DELETE FROM Productos WHERE id_producto =" + id_producto;
             this.comando.ExecuteNonQuery();
             this.desconectar();
         }

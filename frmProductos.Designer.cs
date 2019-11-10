@@ -72,6 +72,7 @@
             this.dgProductos.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgProductos.Size = new System.Drawing.Size(1109, 531);
             this.dgProductos.TabIndex = 0;
+            this.dgProductos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgProductos_CellClick);
             this.dgProductos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgProductos_CellContentClick);
             // 
             // btnNuevo
@@ -102,6 +103,7 @@
             this.btnActualizar.Text = "Actualizar";
             this.btnActualizar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnActualizar.UseVisualStyleBackColor = true;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
             // btnEliminar
             // 
@@ -116,6 +118,7 @@
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnVolver
             // 
@@ -130,6 +133,7 @@
             this.btnVolver.Text = "Volver";
             this.btnVolver.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnVolver.UseVisualStyleBackColor = true;
+            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
             // label1
             // 
@@ -140,7 +144,7 @@
             this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.label1.Location = new System.Drawing.Point(35, 29);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(104, 25);
+            this.label1.Size = new System.Drawing.Size(135, 32);
             this.label1.TabIndex = 6;
             this.label1.Text = "       Filtrar:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -149,7 +153,7 @@
             // 
             this.txtFiltroNombre.Location = new System.Drawing.Point(109, 72);
             this.txtFiltroNombre.Name = "txtFiltroNombre";
-            this.txtFiltroNombre.Size = new System.Drawing.Size(150, 29);
+            this.txtFiltroNombre.Size = new System.Drawing.Size(150, 34);
             this.txtFiltroNombre.TabIndex = 0;
             // 
             // cboFiltroMarca
@@ -157,7 +161,7 @@
             this.cboFiltroMarca.FormattingEnabled = true;
             this.cboFiltroMarca.Location = new System.Drawing.Point(318, 72);
             this.cboFiltroMarca.Name = "cboFiltroMarca";
-            this.cboFiltroMarca.Size = new System.Drawing.Size(150, 29);
+            this.cboFiltroMarca.Size = new System.Drawing.Size(150, 36);
             this.cboFiltroMarca.TabIndex = 1;
             // 
             // rbMayorQue
@@ -166,7 +170,7 @@
             this.rbMayorQue.BackColor = System.Drawing.Color.Transparent;
             this.rbMayorQue.Location = new System.Drawing.Point(1100, 42);
             this.rbMayorQue.Name = "rbMayorQue";
-            this.rbMayorQue.Size = new System.Drawing.Size(39, 25);
+            this.rbMayorQue.Size = new System.Drawing.Size(47, 32);
             this.rbMayorQue.TabIndex = 9;
             this.rbMayorQue.TabStop = true;
             this.rbMayorQue.Text = ">";
@@ -178,7 +182,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Location = new System.Drawing.Point(36, 76);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(71, 21);
+            this.label2.Size = new System.Drawing.Size(89, 28);
             this.label2.TabIndex = 10;
             this.label2.Text = "Nombre:";
             // 
@@ -188,7 +192,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Location = new System.Drawing.Point(261, 76);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(56, 21);
+            this.label3.Size = new System.Drawing.Size(70, 28);
             this.label3.TabIndex = 11;
             this.label3.Text = "Marca:";
             // 
@@ -198,7 +202,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Location = new System.Drawing.Point(690, 76);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(110, 21);
+            this.label4.Size = new System.Drawing.Size(141, 28);
             this.label4.TabIndex = 12;
             this.label4.Text = "Tipo Producto:";
             // 
@@ -208,7 +212,7 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Location = new System.Drawing.Point(470, 76);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(66, 21);
+            this.label5.Size = new System.Drawing.Size(85, 28);
             this.label5.TabIndex = 13;
             this.label5.Text = "Modelo:";
             // 
@@ -218,7 +222,7 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Location = new System.Drawing.Point(953, 77);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(56, 21);
+            this.label6.Size = new System.Drawing.Size(70, 28);
             this.label6.TabIndex = 14;
             this.label6.Text = "Precio:";
             // 
@@ -227,7 +231,7 @@
             this.cboFiltroModelo.FormattingEnabled = true;
             this.cboFiltroModelo.Location = new System.Drawing.Point(538, 72);
             this.cboFiltroModelo.Name = "cboFiltroModelo";
-            this.cboFiltroModelo.Size = new System.Drawing.Size(150, 29);
+            this.cboFiltroModelo.Size = new System.Drawing.Size(150, 36);
             this.cboFiltroModelo.TabIndex = 2;
             // 
             // cmbFiltroTipoProducto
@@ -235,14 +239,14 @@
             this.cmbFiltroTipoProducto.FormattingEnabled = true;
             this.cmbFiltroTipoProducto.Location = new System.Drawing.Point(801, 72);
             this.cmbFiltroTipoProducto.Name = "cmbFiltroTipoProducto";
-            this.cmbFiltroTipoProducto.Size = new System.Drawing.Size(150, 29);
+            this.cmbFiltroTipoProducto.Size = new System.Drawing.Size(150, 36);
             this.cmbFiltroTipoProducto.TabIndex = 3;
             // 
             // txtFiltroPrecio
             // 
             this.txtFiltroPrecio.Location = new System.Drawing.Point(1015, 73);
             this.txtFiltroPrecio.Name = "txtFiltroPrecio";
-            this.txtFiltroPrecio.Size = new System.Drawing.Size(119, 29);
+            this.txtFiltroPrecio.Size = new System.Drawing.Size(119, 34);
             this.txtFiltroPrecio.TabIndex = 5;
             // 
             // rbMenorQue
@@ -251,7 +255,7 @@
             this.rbMenorQue.BackColor = System.Drawing.Color.Transparent;
             this.rbMenorQue.Location = new System.Drawing.Point(1018, 42);
             this.rbMenorQue.Name = "rbMenorQue";
-            this.rbMenorQue.Size = new System.Drawing.Size(39, 25);
+            this.rbMenorQue.Size = new System.Drawing.Size(47, 32);
             this.rbMenorQue.TabIndex = 4;
             this.rbMenorQue.TabStop = true;
             this.rbMenorQue.Text = "<";
@@ -263,7 +267,7 @@
             this.rbIgualQue.BackColor = System.Drawing.Color.Transparent;
             this.rbIgualQue.Location = new System.Drawing.Point(1059, 42);
             this.rbIgualQue.Name = "rbIgualQue";
-            this.rbIgualQue.Size = new System.Drawing.Size(39, 25);
+            this.rbIgualQue.Size = new System.Drawing.Size(47, 32);
             this.rbIgualQue.TabIndex = 19;
             this.rbIgualQue.TabStop = true;
             this.rbIgualQue.Text = "=";
@@ -271,7 +275,7 @@
             // 
             // frmProductos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 28F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;

@@ -65,7 +65,7 @@
             this.dgProductos.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedHeaders;
             this.dgProductos.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dgProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgProductos.Location = new System.Drawing.Point(40, 107);
+            this.dgProductos.Location = new System.Drawing.Point(40, 120);
             this.dgProductos.MultiSelect = false;
             this.dgProductos.Name = "dgProductos";
             this.dgProductos.ReadOnly = true;
@@ -73,8 +73,9 @@
             this.dgProductos.RowTemplate.Height = 24;
             this.dgProductos.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgProductos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgProductos.Size = new System.Drawing.Size(1109, 544);
+            this.dgProductos.Size = new System.Drawing.Size(1109, 531);
             this.dgProductos.TabIndex = 0;
+            this.dgProductos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgProductos_CellClick);
             this.dgProductos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgProductos_CellContentClick);
             // 
             // btnNuevo
@@ -105,7 +106,7 @@
             this.btnActualizar.Text = "Actualizar";
             this.btnActualizar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnActualizar.UseVisualStyleBackColor = true;
-            this.btnActualizar.Click += new System.EventHandler(this.BtnActualizar_Click);
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
             // btnEliminar
             // 
@@ -120,7 +121,7 @@
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnEliminar.UseVisualStyleBackColor = true;
-            this.btnEliminar.Click += new System.EventHandler(this.BtnEliminar_Click);
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnVolver
             // 
@@ -146,7 +147,7 @@
             this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.label1.Location = new System.Drawing.Point(35, 29);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(104, 25);
+            this.label1.Size = new System.Drawing.Size(135, 32);
             this.label1.TabIndex = 6;
             this.label1.Text = "       Filtrar:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -155,7 +156,7 @@
             // 
             this.txtFiltroNombre.Location = new System.Drawing.Point(218, 29);
             this.txtFiltroNombre.Name = "txtFiltroNombre";
-            this.txtFiltroNombre.Size = new System.Drawing.Size(170, 29);
+            this.txtFiltroNombre.Size = new System.Drawing.Size(170, 34);
             this.txtFiltroNombre.TabIndex = 0;
             // 
             // cboFiltroMarca
@@ -163,7 +164,7 @@
             this.cboFiltroMarca.FormattingEnabled = true;
             this.cboFiltroMarca.Location = new System.Drawing.Point(687, 29);
             this.cboFiltroMarca.Name = "cboFiltroMarca";
-            this.cboFiltroMarca.Size = new System.Drawing.Size(170, 29);
+            this.cboFiltroMarca.Size = new System.Drawing.Size(170, 36);
             this.cboFiltroMarca.TabIndex = 1;
             // 
             // rbMayorQue
@@ -171,9 +172,9 @@
             this.rbMayorQue.AutoSize = true;
             this.rbMayorQue.BackColor = System.Drawing.Color.Transparent;
             this.rbMayorQue.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbMayorQue.Location = new System.Drawing.Point(422, 68);
+            this.rbMayorQue.Location = new System.Drawing.Point(520, 78);
             this.rbMayorQue.Name = "rbMayorQue";
-            this.rbMayorQue.Size = new System.Drawing.Size(85, 21);
+            this.rbMayorQue.Size = new System.Drawing.Size(108, 27);
             this.rbMayorQue.TabIndex = 9;
             this.rbMayorQue.TabStop = true;
             this.rbMayorQue.Text = "mayor que";
@@ -185,7 +186,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Location = new System.Drawing.Point(145, 33);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(71, 21);
+            this.label2.Size = new System.Drawing.Size(89, 28);
             this.label2.TabIndex = 10;
             this.label2.Text = "Nombre:";
             // 
@@ -195,7 +196,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Location = new System.Drawing.Point(630, 33);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(56, 21);
+            this.label3.Size = new System.Drawing.Size(70, 28);
             this.label3.TabIndex = 11;
             this.label3.Text = "Marca:";
             // 
@@ -205,7 +206,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Location = new System.Drawing.Point(859, 34);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(110, 21);
+            this.label4.Size = new System.Drawing.Size(141, 28);
             this.label4.TabIndex = 12;
             this.label4.Text = "Tipo Producto:";
             // 
@@ -215,7 +216,7 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Location = new System.Drawing.Point(390, 33);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(66, 21);
+            this.label5.Size = new System.Drawing.Size(85, 28);
             this.label5.TabIndex = 13;
             this.label5.Text = "Modelo:";
             // 
@@ -223,9 +224,9 @@
             // 
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Location = new System.Drawing.Point(145, 68);
+            this.label6.Location = new System.Drawing.Point(159, 74);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(56, 21);
+            this.label6.Size = new System.Drawing.Size(70, 28);
             this.label6.TabIndex = 14;
             this.label6.Text = "Precio:";
             // 
@@ -234,22 +235,22 @@
             this.cboFiltroModelo.FormattingEnabled = true;
             this.cboFiltroModelo.Location = new System.Drawing.Point(458, 29);
             this.cboFiltroModelo.Name = "cboFiltroModelo";
-            this.cboFiltroModelo.Size = new System.Drawing.Size(170, 29);
+            this.cboFiltroModelo.Size = new System.Drawing.Size(170, 36);
             this.cboFiltroModelo.TabIndex = 2;
             // 
             // cmbFiltroTipoProducto
             // 
             this.cmbFiltroTipoProducto.FormattingEnabled = true;
-            this.cmbFiltroTipoProducto.Location = new System.Drawing.Point(970, 30);
+            this.cmbFiltroTipoProducto.Location = new System.Drawing.Point(979, 30);
             this.cmbFiltroTipoProducto.Name = "cmbFiltroTipoProducto";
-            this.cmbFiltroTipoProducto.Size = new System.Drawing.Size(170, 29);
+            this.cmbFiltroTipoProducto.Size = new System.Drawing.Size(170, 36);
             this.cmbFiltroTipoProducto.TabIndex = 3;
             // 
             // txtFiltroPrecio
             // 
-            this.txtFiltroPrecio.Location = new System.Drawing.Point(527, 64);
+            this.txtFiltroPrecio.Location = new System.Drawing.Point(687, 74);
             this.txtFiltroPrecio.Name = "txtFiltroPrecio";
-            this.txtFiltroPrecio.Size = new System.Drawing.Size(119, 29);
+            this.txtFiltroPrecio.Size = new System.Drawing.Size(170, 34);
             this.txtFiltroPrecio.TabIndex = 5;
             // 
             // rbMenorQue
@@ -257,9 +258,9 @@
             this.rbMenorQue.AutoSize = true;
             this.rbMenorQue.BackColor = System.Drawing.Color.Transparent;
             this.rbMenorQue.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbMenorQue.Location = new System.Drawing.Point(218, 68);
+            this.rbMenorQue.Location = new System.Drawing.Point(235, 78);
             this.rbMenorQue.Name = "rbMenorQue";
-            this.rbMenorQue.Size = new System.Drawing.Size(85, 21);
+            this.rbMenorQue.Size = new System.Drawing.Size(108, 27);
             this.rbMenorQue.TabIndex = 4;
             this.rbMenorQue.TabStop = true;
             this.rbMenorQue.Text = "menor que";
@@ -270,9 +271,9 @@
             this.rbIgualQue.AutoSize = true;
             this.rbIgualQue.BackColor = System.Drawing.Color.Transparent;
             this.rbIgualQue.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbIgualQue.Location = new System.Drawing.Point(324, 68);
+            this.rbIgualQue.Location = new System.Drawing.Point(383, 78);
             this.rbIgualQue.Name = "rbIgualQue";
-            this.rbIgualQue.Size = new System.Drawing.Size(77, 21);
+            this.rbIgualQue.Size = new System.Drawing.Size(97, 27);
             this.rbIgualQue.TabIndex = 19;
             this.rbIgualQue.TabStop = true;
             this.rbIgualQue.Text = "igual que";
@@ -283,35 +284,37 @@
             this.btnLimpiar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLimpiar.Image = ((System.Drawing.Image)(resources.GetObject("btnLimpiar.Image")));
             this.btnLimpiar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLimpiar.Location = new System.Drawing.Point(661, 67);
+            this.btnLimpiar.Location = new System.Drawing.Point(1068, 70);
             this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Size = new System.Drawing.Size(75, 23);
+            this.btnLimpiar.Size = new System.Drawing.Size(81, 42);
             this.btnLimpiar.TabIndex = 20;
             this.btnLimpiar.Text = "Limpiar";
             this.btnLimpiar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnLimpiar.UseVisualStyleBackColor = true;
+            this.btnLimpiar.Click += new System.EventHandler(this.BtnLimpiar_Click);
             // 
             // btnFiltrar
             // 
             this.btnFiltrar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFiltrar.Image = ((System.Drawing.Image)(resources.GetObject("btnFiltrar.Image")));
             this.btnFiltrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnFiltrar.Location = new System.Drawing.Point(743, 67);
+            this.btnFiltrar.Location = new System.Drawing.Point(979, 70);
             this.btnFiltrar.Name = "btnFiltrar";
             this.btnFiltrar.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.btnFiltrar.Size = new System.Drawing.Size(75, 23);
+            this.btnFiltrar.Size = new System.Drawing.Size(83, 42);
             this.btnFiltrar.TabIndex = 21;
             this.btnFiltrar.Text = "Filtrar";
             this.btnFiltrar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnFiltrar.UseVisualStyleBackColor = true;
+            this.btnFiltrar.Click += new System.EventHandler(this.btnFiltrar_Click);
             // 
             // frmProductos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 28F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(1184, 761);
+            this.ClientSize = new System.Drawing.Size(1184, 749);
             this.Controls.Add(this.btnFiltrar);
             this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.rbIgualQue);

@@ -57,7 +57,7 @@
             this.txtId.Location = new System.Drawing.Point(17, 35);
             this.txtId.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(61, 29);
+            this.txtId.Size = new System.Drawing.Size(61, 34);
             this.txtId.TabIndex = 0;
             // 
             // txtNombreProd
@@ -65,7 +65,7 @@
             this.txtNombreProd.Location = new System.Drawing.Point(17, 99);
             this.txtNombreProd.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtNombreProd.Name = "txtNombreProd";
-            this.txtNombreProd.Size = new System.Drawing.Size(250, 29);
+            this.txtNombreProd.Size = new System.Drawing.Size(250, 34);
             this.txtNombreProd.TabIndex = 1;
             // 
             // txtPrecio
@@ -73,7 +73,7 @@
             this.txtPrecio.Location = new System.Drawing.Point(17, 163);
             this.txtPrecio.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtPrecio.Name = "txtPrecio";
-            this.txtPrecio.Size = new System.Drawing.Size(250, 29);
+            this.txtPrecio.Size = new System.Drawing.Size(250, 34);
             this.txtPrecio.TabIndex = 2;
             // 
             // cboTipoProd
@@ -82,7 +82,7 @@
             this.cboTipoProd.Location = new System.Drawing.Point(17, 227);
             this.cboTipoProd.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cboTipoProd.Name = "cboTipoProd";
-            this.cboTipoProd.Size = new System.Drawing.Size(250, 29);
+            this.cboTipoProd.Size = new System.Drawing.Size(250, 36);
             this.cboTipoProd.TabIndex = 3;
             // 
             // txtColor
@@ -90,7 +90,7 @@
             this.txtColor.Location = new System.Drawing.Point(17, 291);
             this.txtColor.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtColor.Name = "txtColor";
-            this.txtColor.Size = new System.Drawing.Size(250, 29);
+            this.txtColor.Size = new System.Drawing.Size(250, 34);
             this.txtColor.TabIndex = 4;
             // 
             // txtDetalles
@@ -98,7 +98,7 @@
             this.txtDetalles.Location = new System.Drawing.Point(17, 355);
             this.txtDetalles.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtDetalles.Name = "txtDetalles";
-            this.txtDetalles.Size = new System.Drawing.Size(250, 29);
+            this.txtDetalles.Size = new System.Drawing.Size(250, 34);
             this.txtDetalles.TabIndex = 5;
             // 
             // cboModelo
@@ -107,7 +107,7 @@
             this.cboModelo.Location = new System.Drawing.Point(17, 419);
             this.cboModelo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cboModelo.Name = "cboModelo";
-            this.cboModelo.Size = new System.Drawing.Size(250, 29);
+            this.cboModelo.Size = new System.Drawing.Size(250, 36);
             this.cboModelo.TabIndex = 6;
             // 
             // txtStockMin
@@ -115,7 +115,7 @@
             this.txtStockMin.Location = new System.Drawing.Point(17, 483);
             this.txtStockMin.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtStockMin.Name = "txtStockMin";
-            this.txtStockMin.Size = new System.Drawing.Size(250, 29);
+            this.txtStockMin.Size = new System.Drawing.Size(250, 34);
             this.txtStockMin.TabIndex = 7;
             // 
             // txtStockAct
@@ -123,7 +123,7 @@
             this.txtStockAct.Location = new System.Drawing.Point(17, 547);
             this.txtStockAct.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtStockAct.Name = "txtStockAct";
-            this.txtStockAct.Size = new System.Drawing.Size(250, 29);
+            this.txtStockAct.Size = new System.Drawing.Size(250, 34);
             this.txtStockAct.TabIndex = 8;
             // 
             // btnGuardar
@@ -140,7 +140,7 @@
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnGuardar.UseVisualStyleBackColor = true;
-            this.btnGuardar.Click += new System.EventHandler(this.BtnGuardar_Click);
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // btnCancelar
             // 
@@ -161,7 +161,7 @@
             this.lblId.Location = new System.Drawing.Point(13, 9);
             this.lblId.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblId.Name = "lblId";
-            this.lblId.Size = new System.Drawing.Size(25, 21);
+            this.lblId.Size = new System.Drawing.Size(31, 28);
             this.lblId.TabIndex = 11;
             this.lblId.Text = "ID";
             // 
@@ -173,7 +173,7 @@
             this.lblNombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblNombre.Size = new System.Drawing.Size(163, 21);
+            this.lblNombre.Size = new System.Drawing.Size(207, 28);
             this.lblNombre.TabIndex = 12;
             this.lblNombre.Text = "Nombre del Producto:";
             // 
@@ -184,7 +184,7 @@
             this.lblPrecio.Location = new System.Drawing.Point(13, 135);
             this.lblPrecio.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPrecio.Name = "lblPrecio";
-            this.lblPrecio.Size = new System.Drawing.Size(56, 21);
+            this.lblPrecio.Size = new System.Drawing.Size(70, 28);
             this.lblPrecio.TabIndex = 13;
             this.lblPrecio.Text = "Precio:";
             // 
@@ -195,7 +195,7 @@
             this.lblTipoproducto.Location = new System.Drawing.Point(13, 199);
             this.lblTipoproducto.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTipoproducto.Name = "lblTipoproducto";
-            this.lblTipoproducto.Size = new System.Drawing.Size(135, 21);
+            this.lblTipoproducto.Size = new System.Drawing.Size(173, 28);
             this.lblTipoproducto.TabIndex = 14;
             this.lblTipoproducto.Text = "Tipo del Producto:";
             // 
@@ -206,7 +206,7 @@
             this.lblColor.Location = new System.Drawing.Point(13, 263);
             this.lblColor.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblColor.Name = "lblColor";
-            this.lblColor.Size = new System.Drawing.Size(51, 21);
+            this.lblColor.Size = new System.Drawing.Size(64, 28);
             this.lblColor.TabIndex = 15;
             this.lblColor.Text = "Color:";
             // 
@@ -217,7 +217,7 @@
             this.lblDetalles.Location = new System.Drawing.Point(13, 327);
             this.lblDetalles.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDetalles.Name = "lblDetalles";
-            this.lblDetalles.Size = new System.Drawing.Size(68, 21);
+            this.lblDetalles.Size = new System.Drawing.Size(85, 28);
             this.lblDetalles.TabIndex = 16;
             this.lblDetalles.Text = "Detalles:";
             // 
@@ -228,7 +228,7 @@
             this.lblModelo.Location = new System.Drawing.Point(13, 391);
             this.lblModelo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblModelo.Name = "lblModelo";
-            this.lblModelo.Size = new System.Drawing.Size(66, 21);
+            this.lblModelo.Size = new System.Drawing.Size(85, 28);
             this.lblModelo.TabIndex = 17;
             this.lblModelo.Text = "Modelo:";
             // 
@@ -239,7 +239,7 @@
             this.lblStockMin.Location = new System.Drawing.Point(13, 455);
             this.lblStockMin.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblStockMin.Name = "lblStockMin";
-            this.lblStockMin.Size = new System.Drawing.Size(108, 21);
+            this.lblStockMin.Size = new System.Drawing.Size(137, 28);
             this.lblStockMin.TabIndex = 18;
             this.lblStockMin.Text = "Stock Mínimo:";
             // 
@@ -250,17 +250,17 @@
             this.lblStockAct.Location = new System.Drawing.Point(13, 519);
             this.lblStockAct.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblStockAct.Name = "lblStockAct";
-            this.lblStockAct.Size = new System.Drawing.Size(97, 21);
+            this.lblStockAct.Size = new System.Drawing.Size(124, 28);
             this.lblStockAct.TabIndex = 19;
             this.lblStockAct.Text = "Stock Actual:";
             // 
             // frmAltaModificacion
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 28F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(284, 661);
+            this.ClientSize = new System.Drawing.Size(301, 661);
             this.Controls.Add(this.lblStockAct);
             this.Controls.Add(this.lblStockMin);
             this.Controls.Add(this.lblModelo);

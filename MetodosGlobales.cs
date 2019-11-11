@@ -50,5 +50,6 @@ namespace Automotores
             tipoDato = t.Rows[0][0].ToString();
             return tipoDato;
         }
+
     }
 }

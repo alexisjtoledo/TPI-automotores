@@ -208,6 +208,12 @@ namespace Automotores
             this.comando.ExecuteNonQuery();
             this.comando.CommandText = "CREATE VIEW Vista_productos AS SELECT P.id_producto AS 'Cod.', P.nombre AS 'Nombre', TP.nombre AS 'Tipo', P.color AS 'Color', Ma.nombre AS 'Marca', M.nombre AS 'Modelo', P.precio AS 'Precio' , P.stock_minimo AS 'Stock Mínimo', P.stock AS 'Stock Actual', P.detalles AS 'Detalles' FROM Productos P JOIN Tipos_de_Producto TP ON P.id_tipo_producto = TP.id_tipo_producto JOIN Modelos M ON P.id_modelo = M.id_modelo JOIN Marcas Ma ON M.id_marca = Ma.id_marca";
             this.comando.ExecuteNonQuery();
+            this.comando.CommandText = "CREATE VIEW productos_vendidos_2019 AS SELECT df.id_producto as 'Codigo Producto', pr.nombre as 'Nombre Producto', ma.nombre as 'Marca', md.nombre as 'Modelo', SUM(df.cantidad * df.precio_unitario) as 'Total Facturado' FROM Facturas f JOIN Detalles_de_Factura df ON df.num_factura = f.num_factura JOIN Productos pr ON pr.id_producto = df.id_producto LEFT JOIN Modelos md ON md.id_modelo = pr.id_modelo LEFT JOIN Marcas ma ON ma.id_marca = md.id_marca WHERE YEAR(f.fecha_factura) = YEAR(GETDATE()) GROUP BY df.id_producto, pr.nombre, ma.nombre, md.nombre";
+            this.comando.ExecuteNonQuery();
+            this.comando.CommandText = "CREATE VIEW productos_vendidos_2018 AS SELECT df.id_producto as 'Codigo Producto', pr.nombre as 'Nombre Producto', ma.nombre as 'Marca', md.nombre as 'Modelo', SUM(df.cantidad * df.precio_unitario) as 'Total Facturado' FROM Facturas f JOIN Detalles_de_Factura df ON df.num_factura = f.num_factura JOIN Productos pr ON pr.id_producto = df.id_producto LEFT JOIN Modelos md ON md.id_modelo = pr.id_modelo LEFT JOIN Marcas ma ON ma.id_marca = md.id_marca WHERE YEAR(f.fecha_factura) = YEAR(GETDATE()) - 1 GROUP BY df.id_producto, pr.nombre, ma.nombre, md.nombre";
+            this.comando.ExecuteNonQuery();
+            this.comando.CommandText = "CREATE VIEW productos_no_vendidos AS SELECT id_producto as 'Codigo Producto', nombre as 'Nombre Producto' FROM Productos WHERE id_producto NOT IN (SELECT df.id_producto FROM Detalles_de_Factura df)";
+            this.comando.ExecuteNonQuery();
             this.desconectar();
         }
     }

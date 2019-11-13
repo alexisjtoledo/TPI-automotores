@@ -60,5 +60,11 @@ namespace Automotores
                 e.Cancel = true;
             }
         }
+
+        private void btnReportes_Click(object sender, EventArgs e)
+        {
+            frmReportes frs = new frmReportes();
+            frs.ShowDialog();
+        }
     }
 }

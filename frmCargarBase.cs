@@ -64,8 +64,8 @@ namespace Automotores
 
         private void FrmCargarBase_Shown(object sender, EventArgs e)
         {
-            MessageBox.Show("Su base de datos ya se encuentra cargada correctamente.");
-            btnCargarStructure.Enabled = false;
+            //MessageBox.Show("Su base de datos ya se encuentra cargada correctamente.");
+            //btnCargarStructure.Enabled = false;
             btnCargarData.Enabled = false;
             button1.Enabled = false;
         }

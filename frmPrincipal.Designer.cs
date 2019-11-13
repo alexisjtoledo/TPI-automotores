@@ -66,9 +66,10 @@
             this.btnReportes.Padding = new System.Windows.Forms.Padding(0, 10, 0, 10);
             this.btnReportes.Size = new System.Drawing.Size(240, 90);
             this.btnReportes.TabIndex = 2;
-            this.btnReportes.Text = "REPORTES";
+            this.btnReportes.Text = "REPORTE";
             this.btnReportes.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnReportes.UseVisualStyleBackColor = true;
+            this.btnReportes.Click += new System.EventHandler(this.btnReportes_Click);
             // 
             // button5
             // 
@@ -110,7 +111,7 @@
             // 
             // frmPrincipal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 32F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));

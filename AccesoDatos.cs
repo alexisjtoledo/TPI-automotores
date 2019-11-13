@@ -31,7 +31,7 @@ namespace Automotores
         }
         public void conectar()
         {
-            this.conexion.ConnectionString = @"Data Source=DESKTOP-2UN2K3I\MYSQL17;Initial Catalog=Automotores;Integrated Security=True";
+            this.conexion.ConnectionString = @"Data Source=ALEXIS;Initial Catalog=Automotores;Integrated Security=True";
             this.conexion.Open();
             this.comando.Connection = conexion;
             this.comando.CommandType = CommandType.Text;

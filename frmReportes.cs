@@ -23,7 +23,7 @@ namespace Automotores
 
         private void btnVolver_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Hide();
         }
 
         private void btnReporte1_Click(object sender, EventArgs e)
@@ -42,6 +42,11 @@ namespace Automotores
         {
             vistaReporte3 frmReporte3 = new vistaReporte3();
             frmReporte3.ShowDialog();
+        }
+
+        private void frmReportes_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            e.Cancel = true;
         }
     }
 }
